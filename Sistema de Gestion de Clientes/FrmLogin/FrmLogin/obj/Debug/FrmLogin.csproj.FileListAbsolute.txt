@@ -1,0 +1,1 @@
+C:\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\bin\Debug\FrmLogin.exe.config
