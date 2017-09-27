@@ -97,7 +97,7 @@ namespace FrmLogin
 
         private void FrmModificarGestionCliente_Load(object sender, EventArgs e)
         {
-
+            cbPlazo.SelectedIndex = 0;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -120,7 +120,7 @@ namespace FrmLogin
                 guardar = "Otorgado en Comercio";
             }
 
-            identificacion = dgvGrillaHistorialCliente[9, dgvGrillaHistorialCliente.CurrentCell.RowIndex].Value.ToString();
+            identificacion = dgvGrillaHistorialCliente[10, dgvGrillaHistorialCliente.CurrentCell.RowIndex].Value.ToString();
 
              Brl.modificarGestionCliente(                               txtDni.Text, 
                                                                         identificacion,                                                                      
@@ -134,10 +134,30 @@ namespace FrmLogin
                                                                         cbEstado.Text
                                                                        );
 
-                                            MessageBox.Show("La gestion se guardo con exito");
+                                            MessageBox.Show("La gestion se modifico con exito");
 
                                             dgvGrillaHistorialCliente.DataSource = Brl.obtenerHistorialCliente(txtDni.Text);
                                         
+        }
+
+        private void cbOrigen_MouseDown(object sender, MouseEventArgs e)
+        {
+            cbRelacOrigen.SelectedValue = "";
+            cbRelacOrigen.Text = "";
+            cbOrigen.DataSource = Brl.obtenerOrigen();
+            cbOrigen.ValueMember = "descripcion";
+            cbOrigen.DisplayMember = "descripcion";
+        }
+
+        private void cbRelacOrigen_MouseDown(object sender, MouseEventArgs e)
+        {
+            string valor = ((System.Data.DataRowView)cbOrigen.SelectedItem).Row.ItemArray[0].ToString();
+
+            cbRelacOrigen.DataSource = Brl.obtenerOrigenCorrespondiente(valor);
+            //indicamos el valor de los miembros
+            cbRelacOrigen.ValueMember = "descripcion";
+            //se indica el valor a desplegar en el combobox
+            cbRelacOrigen.DisplayMember = "descripcion";    
         }
     }
 }

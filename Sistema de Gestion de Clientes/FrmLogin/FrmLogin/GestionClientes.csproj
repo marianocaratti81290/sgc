@@ -44,6 +44,7 @@
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,6 +63,12 @@
     </Compile>
     <Compile Include="FrmAccesoSistema.Designer.cs">
       <DependentUpon>FrmAccesoSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCampaña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCampaña.Designer.cs">
+      <DependentUpon>FrmCampaña.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmClientes.cs">
       <SubType>Form</SubType>
@@ -222,6 +229,9 @@
     </Compile>
     <EmbeddedResource Include="FrmAccesoSistema.resx">
       <DependentUpon>FrmAccesoSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCampaña.resx">
+      <DependentUpon>FrmCampaña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>

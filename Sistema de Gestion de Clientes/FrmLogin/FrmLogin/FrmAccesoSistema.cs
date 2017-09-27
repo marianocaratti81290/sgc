@@ -113,7 +113,6 @@ namespace FrmLogin
             }
             catch (Exception)
             {
-
                 lblNoExito.Visible = true;
             }
 

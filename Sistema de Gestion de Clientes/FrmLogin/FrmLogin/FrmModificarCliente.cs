@@ -169,6 +169,118 @@ namespace FrmLogin
             }
         }
 
+        private void btnModificarCliente_Click(object sender, EventArgs e)
+        {
+             string situacionLaboral= "";
+
+            if (MessageBox.Show("Estas seguro que desea modificar el cliente", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                 if (rbConTrabajo.Checked == true && txtLugarTrabajo.Text == "" && txtRubro.Text == "")
+                {
+
+                    MessageBox.Show("Ingrese los datos laborales");
+
+                }
+                else
+
+
+                    if (txtNombre.Text == "")
+                    {
+                        MessageBox.Show("Ingrese el Nombre del cliente");
+                    }
+                    else
+                        if (txtApellido.Text == "")
+                        {
+                            MessageBox.Show("Ingrese el apellido del cliente");
+                        }
+                        else
+                            if (txtDni.Text == "")
+                            {
+                                MessageBox.Show("Ingrese el dni del cliente");
+                            }
+                            else 
+
+                                        if (rbConTrabajo.Checked == true)
+                                        {
+                                            situacionLaboral = "1";
+                                        }
+                                        else
+                                        {
+                                            situacionLaboral = "0";
+                                            txtLugarTrabajo.Text = "No posee";
+                                            txtRubro.Text = "No posee";
+                                            txtTitulo.Text = "No posee";
+                                            txtObservacion.Text = "No posee";
+                                            txtCodAreaDL.Text = "0";
+                                            txtTelDL.Text = "0";
+                                            txtInt1.Text = "0";
+                                            txtCodArea2DL.Text = "0";
+                                            txtTel2DL.Text = "0";
+                                            txtInt2.Text = "0";
+                                            txtCodAreaCelDL.Text = "0";
+                                            txtCelDL.Text = "0";
+                                            txtCodAreaCel2DL.Text = "0";
+                                            txtCel2DL.Text = "0";
+
+                                        }
+
+
+
+                                        Brl.modificarCliente(
+                                            txtNombre.Text,
+                                            txtApellido.Text,
+                                            txtDni.Text,
+                                            txtCuil1.Text,
+                                            txtCuil2.Text,
+                                            txtCuil3.Text,
+                                            Convert.ToDateTime(dtpNacimiento.Text),
+                                            cbEstadoCivil.Text,
+                                            cbSexo.Text,
+                                            txtCodAreaDP.Text,
+                                            txtTelDP.Text,
+                                            txtRef1.Text,
+                                            txtCodArea2DP.Text,
+                                            txtTel2DP.Text,
+                                            txtRef2.Text,
+                                            txtCodAreaCelDP.Text,
+                                            txtCelDP.Text,
+                                            txtRef3.Text,
+                                            txtCalle.Text,
+                                            txtNumero.Text,
+                                            txtEntre1.Text,
+                                            txtEntre2.Text,
+                                            txtPiso.Text,
+                                            txtDepto.Text,
+                                            cbLocalidad.Text,
+                                            cbProvincia.Text,
+                                            txtEmail.Text,
+                                            txtCp.Text,
+                                            situacionLaboral,
+                                            txtLugarTrabajo.Text,
+                                            txtRubro.Text,
+                                            txtTitulo.Text,
+                                            txtObservacion.Text,
+                                            txtCodAreaDL.Text,
+                                            txtTelDL.Text,
+                                            txtInt1.Text,
+                                            txtCodArea2DL.Text,
+                                            txtTel2DL.Text,
+                                            txtInt2.Text,
+                                            txtCodAreaCelDL.Text,
+                                            txtCelDL.Text,
+                                            txtCodAreaCel2DL.Text,
+                                            txtCel2DL.Text
+                                            );
+
+                                        MessageBox.Show("El cliente se modificó correctamente");
+                                        
+                                    }
+                                                                   
+                }
+        }
+
+        
+
        
     }
-}
+

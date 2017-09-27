@@ -256,6 +256,57 @@ namespace FrmLogin
 
         }
 
+        public static DataTable obtenerUsuarioCb()
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("buscarClientecb_q_sp", Comun.establecerConexion);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        public static DataTable obtenerSucursalesCb()
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("obtenerSucursalesCb_q_sp", Comun.establecerConexion);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
         public static DataTable obtenerSucursalesCompleta()
         {
             try
@@ -1275,6 +1326,116 @@ namespace FrmLogin
             {
 
                 SqlCommand cmd = new SqlCommand("nuevoCliente_i_sp", Comun.establecerConexion);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@nombre", txtNombre);
+                cmd.Parameters.AddWithValue("@apellido", txtApellido);
+                cmd.Parameters.AddWithValue("@dni", txtDni);
+                cmd.Parameters.AddWithValue("@cuil", txtCuil1 + txtCuil2 + txtCuil3);
+                cmd.Parameters.AddWithValue("@fecha_nacimiento", dtpNacimiento);
+                cmd.Parameters.AddWithValue("@estado_civil", cbEstadoCivil);
+                cmd.Parameters.AddWithValue("@sexo", cbSexo);
+                cmd.Parameters.AddWithValue("@codAreaTel1", txtCodAreaDP);
+                cmd.Parameters.AddWithValue("@tel1", txtTelDP);
+                cmd.Parameters.AddWithValue("@ref1", txtRef1);
+                cmd.Parameters.AddWithValue("@codAreaTel2", txtCodArea2DP);
+                cmd.Parameters.AddWithValue("@tel2", txtTel2DP);
+                cmd.Parameters.AddWithValue("@ref2", txtRef2);
+                cmd.Parameters.AddWithValue("@codAreaCel1", txtCodAreaCelDP);
+                cmd.Parameters.AddWithValue("@cel1", txtCelDP);
+                cmd.Parameters.AddWithValue("@ref3", txtRef3);
+                cmd.Parameters.AddWithValue("@calle", txtcalle);
+                cmd.Parameters.AddWithValue("@nro", txtNro);
+                cmd.Parameters.AddWithValue("@entre1", txtEntre1);
+                cmd.Parameters.AddWithValue("@entre2", txtEntre2);
+                cmd.Parameters.AddWithValue("@piso", txtPiso);
+                cmd.Parameters.AddWithValue("@depto", txtDepto);
+                cmd.Parameters.AddWithValue("@localidad", cbLocalidad);
+                cmd.Parameters.AddWithValue("@provincia", cbProvincia);
+                cmd.Parameters.AddWithValue("@email", txtEmail);
+                cmd.Parameters.AddWithValue("@cp", txtCp);
+                cmd.Parameters.AddWithValue("@situacionLaboral", situacionLaboral);
+                cmd.Parameters.AddWithValue("@lugarTrabajo", txtLugarTrabajo);
+                cmd.Parameters.AddWithValue("@rubro", txtRubro);
+                cmd.Parameters.AddWithValue("@titulo", txtTitulo);
+                cmd.Parameters.AddWithValue("@observacion", txtObservacion);
+                cmd.Parameters.AddWithValue("@codAreaTel1Laboral", txtCodAreaDL);
+                cmd.Parameters.AddWithValue("@tel1Laboral", txtTelDL);
+                cmd.Parameters.AddWithValue("@Int1", txtInt1);
+                cmd.Parameters.AddWithValue("@codAreaTel2Laboral", txtCodArea2DL);
+                cmd.Parameters.AddWithValue("@tel2Laboral", txtTel2DL);
+                cmd.Parameters.AddWithValue("@int2", txtInt2);
+                cmd.Parameters.AddWithValue("@codAreaCel1Laboral", txtCodAreaCelDL);
+                cmd.Parameters.AddWithValue("@cel1Laboral", txtCelDL);
+                cmd.Parameters.AddWithValue("@codAreaCel2Laboral", txtCodAreaCel2DL);
+                cmd.Parameters.AddWithValue("@cel2Laboral", txtCel2DL);
+
+                Comun.establecerConexion.Open();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                cmd.ExecuteReader().Close();
+                Comun.establecerConexion.Close();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        public static void modificarCliente(
+                                   string txtNombre,
+                                   string txtApellido,
+                                   string txtDni,
+                                   string txtCuil1,
+                                   string txtCuil2,
+                                   string txtCuil3,
+                                   DateTime dtpNacimiento,
+                                   string cbEstadoCivil,
+                                   string cbSexo,
+                                   string txtCodAreaDP,
+                                   string txtTelDP,
+                                   string txtRef1,
+                                   string txtCodArea2DP,
+                                   string txtTel2DP,
+                                   string txtRef2,
+                                   string txtCodAreaCelDP,
+                                   string txtCelDP,
+                                   string txtRef3,
+                                   string txtcalle,
+                                   string txtNro,
+                                   string txtEntre1,
+                                   string txtEntre2,
+                                   string txtPiso,
+                                   string txtDepto,
+                                   string cbLocalidad,
+                                   string cbProvincia,
+                                   string txtEmail,
+                                   string txtCp,
+                                   string situacionLaboral,
+                                   string txtLugarTrabajo,
+                                   string txtRubro,
+                                   string txtTitulo,
+                                   string txtObservacion,
+                                   string txtCodAreaDL,
+                                   string txtTelDL,
+                                   string txtInt1,
+                                   string txtCodArea2DL,
+                                   string txtTel2DL,
+                                   string txtInt2,
+                                   string txtCodAreaCelDL,
+                                   string txtCelDL,
+                                   string txtCodAreaCel2DL,
+                                   string txtCel2DL
+           )
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("modificarCliente_u_sp", Comun.establecerConexion);
 
                 cmd.CommandType = CommandType.StoredProcedure;
 

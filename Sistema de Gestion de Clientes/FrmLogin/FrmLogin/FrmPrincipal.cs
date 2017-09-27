@@ -335,6 +335,11 @@ namespace FrmLogin
             new FrmModificarGestionCliente().ShowDialog();
         }
 
+        private void importarCampañaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmCampaña().ShowDialog();
+        }
+
         
     }
 }

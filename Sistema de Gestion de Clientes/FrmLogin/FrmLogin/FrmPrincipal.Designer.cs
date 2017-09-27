@@ -36,6 +36,7 @@
             this.consultarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaGestionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarGestionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificacionDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,7 +57,8 @@
             this.permisosPorUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.permisosPorFuncionalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarGestionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.campañasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importarCampañaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +69,7 @@
             this.gestionesToolStripMenuItem,
             this.usuariosToolStripMenuItem,
             this.sucursalesToolStripMenuItem,
+            this.campañasToolStripMenuItem,
             this.reportesToolStripMenuItem,
             this.objetivosToolStripMenuItem,
             this.permisoToolStripMenuItem,
@@ -125,6 +128,13 @@
             this.nuevaGestionToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.nuevaGestionToolStripMenuItem.Text = "Nueva Gestion";
             this.nuevaGestionToolStripMenuItem.Click += new System.EventHandler(this.nuevaGestionToolStripMenuItem_Click);
+            // 
+            // modificarGestionToolStripMenuItem
+            // 
+            this.modificarGestionToolStripMenuItem.Name = "modificarGestionToolStripMenuItem";
+            this.modificarGestionToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.modificarGestionToolStripMenuItem.Text = "Modificar Gestion";
+            this.modificarGestionToolStripMenuItem.Click += new System.EventHandler(this.modificarGestionToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
@@ -280,12 +290,20 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // modificarGestionToolStripMenuItem
+            // campañasToolStripMenuItem
             // 
-            this.modificarGestionToolStripMenuItem.Name = "modificarGestionToolStripMenuItem";
-            this.modificarGestionToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.modificarGestionToolStripMenuItem.Text = "Modificar Gestion";
-            this.modificarGestionToolStripMenuItem.Click += new System.EventHandler(this.modificarGestionToolStripMenuItem_Click);
+            this.campañasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.importarCampañaToolStripMenuItem});
+            this.campañasToolStripMenuItem.Name = "campañasToolStripMenuItem";
+            this.campañasToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.campañasToolStripMenuItem.Text = "Campañas";
+            // 
+            // importarCampañaToolStripMenuItem
+            // 
+            this.importarCampañaToolStripMenuItem.Name = "importarCampañaToolStripMenuItem";
+            this.importarCampañaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.importarCampañaToolStripMenuItem.Text = "Importar campaña";
+            this.importarCampañaToolStripMenuItem.Click += new System.EventHandler(this.importarCampañaToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -339,5 +357,7 @@
         private System.Windows.Forms.ToolStripMenuItem objetivosPorSucursalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarGestionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem campañasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importarCampañaToolStripMenuItem;
     }
 }

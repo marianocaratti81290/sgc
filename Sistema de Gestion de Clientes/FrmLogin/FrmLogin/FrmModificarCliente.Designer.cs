@@ -58,7 +58,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtDepto = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnModificarCliente = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
             this.txtPiso = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
@@ -393,7 +393,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtDepto);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnModificarCliente);
             this.groupBox1.Controls.Add(this.label36);
             this.groupBox1.Controls.Add(this.txtPiso);
             this.groupBox1.Controls.Add(this.label35);
@@ -460,14 +460,15 @@
             this.txtDepto.Size = new System.Drawing.Size(173, 20);
             this.txtDepto.TabIndex = 167;
             // 
-            // button1
+            // btnModificarCliente
             // 
-            this.button1.Location = new System.Drawing.Point(698, 310);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 23);
-            this.button1.TabIndex = 145;
-            this.button1.Text = "Modificar Cliente";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnModificarCliente.Location = new System.Drawing.Point(698, 310);
+            this.btnModificarCliente.Name = "btnModificarCliente";
+            this.btnModificarCliente.Size = new System.Drawing.Size(103, 23);
+            this.btnModificarCliente.TabIndex = 145;
+            this.btnModificarCliente.Text = "Modificar Cliente";
+            this.btnModificarCliente.UseVisualStyleBackColor = true;
+            this.btnModificarCliente.Click += new System.EventHandler(this.btnModificarCliente_Click);
             // 
             // label36
             // 
@@ -1083,7 +1084,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnModificarCliente;
         private System.Windows.Forms.ComboBox cbFiltro;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgvClientes;

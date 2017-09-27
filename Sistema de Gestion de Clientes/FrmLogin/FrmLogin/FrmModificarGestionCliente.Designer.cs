@@ -45,14 +45,14 @@
             this.cbOrigen = new System.Windows.Forms.ComboBox();
             this.rbPrestamo = new System.Windows.Forms.RadioButton();
             this.cbRelacOrigen = new System.Windows.Forms.ComboBox();
+            this.txtOperaciones = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvGrillaHistorialCliente = new System.Windows.Forms.DataGridView();
             this.txtDni = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtOperaciones = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -98,6 +98,7 @@
             // 
             // cbPlazo
             // 
+            this.cbPlazo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPlazo.FormattingEnabled = true;
             this.cbPlazo.Items.AddRange(new object[] {
             "dia",
@@ -214,6 +215,7 @@
             this.cbOrigen.Name = "cbOrigen";
             this.cbOrigen.Size = new System.Drawing.Size(121, 21);
             this.cbOrigen.TabIndex = 148;
+            this.cbOrigen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cbOrigen_MouseDown);
             // 
             // rbPrestamo
             // 
@@ -233,6 +235,29 @@
             this.cbRelacOrigen.Name = "cbRelacOrigen";
             this.cbRelacOrigen.Size = new System.Drawing.Size(121, 21);
             this.cbRelacOrigen.TabIndex = 149;
+            this.cbRelacOrigen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cbRelacOrigen_MouseDown);
+            // 
+            // txtOperaciones
+            // 
+            this.txtOperaciones.FormattingEnabled = true;
+            this.txtOperaciones.Items.AddRange(new object[] {
+            "Consulta",
+            "Nuevo Prestamo",
+            "Renovacion",
+            "Paralelo"});
+            this.txtOperaciones.Location = new System.Drawing.Point(396, 26);
+            this.txtOperaciones.Name = "txtOperaciones";
+            this.txtOperaciones.Size = new System.Drawing.Size(150, 21);
+            this.txtOperaciones.TabIndex = 139;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(331, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 138;
+            this.label2.Text = "Operacion:";
             // 
             // groupBox1
             // 
@@ -295,28 +320,6 @@
             this.label3.Size = new System.Drawing.Size(171, 13);
             this.label3.TabIndex = 140;
             this.label3.Text = "Historial de operaciones del cliente";
-            // 
-            // txtOperaciones
-            // 
-            this.txtOperaciones.FormattingEnabled = true;
-            this.txtOperaciones.Items.AddRange(new object[] {
-            "Consulta",
-            "Nuevo Prestamo",
-            "Renovacion",
-            "Paralelo"});
-            this.txtOperaciones.Location = new System.Drawing.Point(396, 26);
-            this.txtOperaciones.Name = "txtOperaciones";
-            this.txtOperaciones.Size = new System.Drawing.Size(150, 21);
-            this.txtOperaciones.TabIndex = 139;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(331, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
-            this.label2.TabIndex = 138;
-            this.label2.Text = "Operacion:";
             // 
             // label1
             // 
