@@ -12,13 +12,14 @@ using System.Data.SqlClient;
 
 namespace FrmLogin
 {
-    public partial class FrmCampaña : Form
+    public partial class FrmCampana : Form
     {
-        public FrmCampaña()
+        public FrmCampana()
         {
             InitializeComponent();
         }
 
+        public static string RelacNewItem;
         private void btnImportar_Click(object sender, EventArgs e)
         {
             int size = -1;
@@ -57,7 +58,44 @@ namespace FrmLogin
 
                                     if (campos.Length == 2)
                                     {
-                                        dtVentas.Rows.Add(campos[0], campos[1]);
+                                        // Ya puedo acceder al archivo
+                                        // lo tengo separado por ,
+                                        // ahora los valores los recorro y los inserto en el store de armado de campaña
+                                        /*
+                                         * campo1 --> fecha leads
+                                         * campo2 --> dni
+                                         * campo3 --> email
+                                         * campo4 --> apyn
+                                         * campo5 --> ciudad
+                                         * campo6 --> telefono
+                                         * campo7 --> usuario
+                                         * campo8 --> fecha_alta
+                                         * campo9 --> fecha_operacion
+                                         * campo10 --> id_gestion
+                                         * campo11 --> usr_admin
+                                         * campo12 --> suc
+                                         * campo13 --> origenMarketing
+                                         * campo14 --> origenRelacMarketing 
+                                         * campo15 --> origenCampañaRelacMarketing
+                                         * 
+                                         * 
+                                         * */
+
+                                     /*   Brl.importarGestionUsuario(campos[0], // fecha leads
+                                            campos[1], // dni
+                                            campos[2], // email
+                                            campos[3], // nombre
+                                            campos[4], // ciudad
+                                            campos[5], // telefono              
+                                            cbUsuarios.Text, // usr que se le asigna esta gestion
+                                            FrmAccesoSistema.UsuarioPermiso, //usr logeo
+                                            cbSucursales.Text, // sucursal asignada
+                                            cbOrigen.Text,
+                                            cbOrigen.Text,
+                                            cbCampañaOrigenMarketing.Text);
+
+
+                                        dtVentas.Rows.Add(campos[0], campos[1]);*/
                                     }
                                 }
 
@@ -127,7 +165,9 @@ namespace FrmLogin
             //indicamos el valor de los miembros
             cbRelacOrigen.ValueMember = "descripcion";
             //se indica el valor a desplegar en el combobox
-            cbRelacOrigen.DisplayMember = "descripcion";    
+            cbRelacOrigen.DisplayMember = "descripcion";
+
+            RelacNewItem = cbRelacOrigen.Text;
         
         }
 
@@ -147,6 +187,22 @@ namespace FrmLogin
             cbSucursales.ValueMember = "nombre";
             //se indica el valor a desplegar en el combobox
             cbSucursales.DisplayMember = "nombre"; 
+        }
+
+        private void cbCampañaOrigenMarketing_MouseDown(object sender, MouseEventArgs e)
+        {
+            string valor = ((System.Data.DataRowView)cbRelacOrigen.SelectedItem).Row.ItemArray[0].ToString();
+            cbCampañaOrigenMarketing.DataSource = Brl.obtenerCampanaOrigenMarketingCorrespondiente(valor);
+            //indicamos el valor de los miembros
+            cbCampañaOrigenMarketing.ValueMember = "descripcion";
+            //se indica el valor a desplegar en el combobox
+            cbCampañaOrigenMarketing.DisplayMember = "descripcion"; 
+        }
+
+        private void btnAgregarSubCampana_Click(object sender, EventArgs e)
+        {
+
+            new FrmAgregarItemCampana().ShowDialog();
         }
 
           

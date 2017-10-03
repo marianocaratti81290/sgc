@@ -1,6 +1,6 @@
 ﻿namespace FrmLogin
 {
-    partial class FrmCampaña
+    partial class FrmCampana
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbCampañaOrigenMarketing = new System.Windows.Forms.ComboBox();
             this.cbRelacOrigen = new System.Windows.Forms.ComboBox();
             this.cbOrigen = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -98,9 +98,9 @@
             // resultadoImportacion
             // 
             this.resultadoImportacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.resultadoImportacion.Location = new System.Drawing.Point(611, 136);
+            this.resultadoImportacion.Location = new System.Drawing.Point(12, 311);
             this.resultadoImportacion.Name = "resultadoImportacion";
-            this.resultadoImportacion.Size = new System.Drawing.Size(419, 139);
+            this.resultadoImportacion.Size = new System.Drawing.Size(1104, 161);
             this.resultadoImportacion.TabIndex = 3;
             // 
             // groupBox1
@@ -112,9 +112,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnImportar);
             this.groupBox1.Controls.Add(this.txtRuta);
-            this.groupBox1.Location = new System.Drawing.Point(9, 107);
+            this.groupBox1.Location = new System.Drawing.Point(729, 102);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(596, 168);
+            this.groupBox1.Size = new System.Drawing.Size(387, 168);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Proceso de importacion de campaña";
@@ -168,7 +168,7 @@
             // lblImportacionCampana
             // 
             this.lblImportacionCampana.AutoSize = true;
-            this.lblImportacionCampana.Location = new System.Drawing.Point(756, 111);
+            this.lblImportacionCampana.Location = new System.Drawing.Point(18, 295);
             this.lblImportacionCampana.Name = "lblImportacionCampana";
             this.lblImportacionCampana.Size = new System.Drawing.Size(159, 13);
             this.lblImportacionCampana.TabIndex = 119;
@@ -180,29 +180,30 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.comboBox3);
+            this.groupBox2.Controls.Add(this.cbCampañaOrigenMarketing);
             this.groupBox2.Controls.Add(this.cbRelacOrigen);
             this.groupBox2.Controls.Add(this.cbOrigen);
-            this.groupBox2.Location = new System.Drawing.Point(9, 281);
+            this.groupBox2.Location = new System.Drawing.Point(12, 103);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(387, 167);
+            this.groupBox2.Size = new System.Drawing.Size(369, 167);
             this.groupBox2.TabIndex = 120;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Campaña";
             // 
             // btnAgregarSubCampana
             // 
-            this.btnAgregarSubCampana.Location = new System.Drawing.Point(342, 116);
+            this.btnAgregarSubCampana.Location = new System.Drawing.Point(326, 116);
             this.btnAgregarSubCampana.Name = "btnAgregarSubCampana";
             this.btnAgregarSubCampana.Size = new System.Drawing.Size(31, 23);
             this.btnAgregarSubCampana.TabIndex = 6;
             this.btnAgregarSubCampana.Text = "+";
             this.btnAgregarSubCampana.UseVisualStyleBackColor = true;
+            this.btnAgregarSubCampana.Click += new System.EventHandler(this.btnAgregarSubCampana_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 119);
+            this.label7.Location = new System.Drawing.Point(6, 119);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 13);
             this.label7.TabIndex = 5;
@@ -211,7 +212,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 79);
+            this.label6.Location = new System.Drawing.Point(6, 79);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 4;
@@ -220,26 +221,27 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 38);
+            this.label5.Location = new System.Drawing.Point(6, 38);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 3;
             this.label5.Text = "Origen";
             // 
-            // comboBox3
+            // cbCampañaOrigenMarketing
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(132, 116);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(204, 21);
-            this.comboBox3.TabIndex = 2;
+            this.cbCampañaOrigenMarketing.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCampañaOrigenMarketing.FormattingEnabled = true;
+            this.cbCampañaOrigenMarketing.Location = new System.Drawing.Point(116, 116);
+            this.cbCampañaOrigenMarketing.Name = "cbCampañaOrigenMarketing";
+            this.cbCampañaOrigenMarketing.Size = new System.Drawing.Size(204, 21);
+            this.cbCampañaOrigenMarketing.TabIndex = 2;
+            this.cbCampañaOrigenMarketing.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cbCampañaOrigenMarketing_MouseDown);
             // 
             // cbRelacOrigen
             // 
             this.cbRelacOrigen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRelacOrigen.FormattingEnabled = true;
-            this.cbRelacOrigen.Location = new System.Drawing.Point(132, 76);
+            this.cbRelacOrigen.Location = new System.Drawing.Point(116, 76);
             this.cbRelacOrigen.Name = "cbRelacOrigen";
             this.cbRelacOrigen.Size = new System.Drawing.Size(204, 21);
             this.cbRelacOrigen.TabIndex = 1;
@@ -249,7 +251,7 @@
             // 
             this.cbOrigen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOrigen.FormattingEnabled = true;
-            this.cbOrigen.Location = new System.Drawing.Point(132, 35);
+            this.cbOrigen.Location = new System.Drawing.Point(116, 35);
             this.cbOrigen.Name = "cbOrigen";
             this.cbOrigen.Size = new System.Drawing.Size(204, 21);
             this.cbOrigen.TabIndex = 0;
@@ -264,9 +266,9 @@
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.cbSucursales);
             this.groupBox3.Controls.Add(this.cbUsuarios);
-            this.groupBox3.Location = new System.Drawing.Point(419, 281);
+            this.groupBox3.Location = new System.Drawing.Point(387, 104);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(387, 167);
+            this.groupBox3.Size = new System.Drawing.Size(336, 167);
             this.groupBox3.TabIndex = 121;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Otras opciones";
@@ -274,7 +276,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(48, 124);
+            this.label8.Location = new System.Drawing.Point(37, 123);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 13);
             this.label8.TabIndex = 153;
@@ -283,7 +285,7 @@
             // rbComercio
             // 
             this.rbComercio.AutoSize = true;
-            this.rbComercio.Location = new System.Drawing.Point(256, 123);
+            this.rbComercio.Location = new System.Drawing.Point(240, 122);
             this.rbComercio.Name = "rbComercio";
             this.rbComercio.Size = new System.Drawing.Size(69, 17);
             this.rbComercio.TabIndex = 152;
@@ -294,7 +296,7 @@
             // rbPrestamo
             // 
             this.rbPrestamo.AutoSize = true;
-            this.rbPrestamo.Location = new System.Drawing.Point(149, 123);
+            this.rbPrestamo.Location = new System.Drawing.Point(133, 122);
             this.rbPrestamo.Name = "rbPrestamo";
             this.rbPrestamo.Size = new System.Drawing.Size(69, 17);
             this.rbPrestamo.TabIndex = 151;
@@ -305,7 +307,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(22, 79);
+            this.label9.Location = new System.Drawing.Point(6, 78);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(94, 13);
             this.label9.TabIndex = 4;
@@ -314,7 +316,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(22, 38);
+            this.label10.Location = new System.Drawing.Point(6, 37);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(89, 13);
             this.label10.TabIndex = 3;
@@ -324,7 +326,7 @@
             // 
             this.cbSucursales.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSucursales.FormattingEnabled = true;
-            this.cbSucursales.Location = new System.Drawing.Point(132, 76);
+            this.cbSucursales.Location = new System.Drawing.Point(116, 75);
             this.cbSucursales.Name = "cbSucursales";
             this.cbSucursales.Size = new System.Drawing.Size(204, 21);
             this.cbSucursales.TabIndex = 1;
@@ -334,7 +336,7 @@
             // 
             this.cbUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbUsuarios.FormattingEnabled = true;
-            this.cbUsuarios.Location = new System.Drawing.Point(132, 35);
+            this.cbUsuarios.Location = new System.Drawing.Point(116, 34);
             this.cbUsuarios.Name = "cbUsuarios";
             this.cbUsuarios.Size = new System.Drawing.Size(204, 21);
             this.cbUsuarios.TabIndex = 0;
@@ -342,7 +344,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(902, 333);
+            this.btnSalir.Location = new System.Drawing.Point(923, 504);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 122;
@@ -351,18 +353,18 @@
             // 
             // btnProcesar
             // 
-            this.btnProcesar.Location = new System.Drawing.Point(890, 375);
+            this.btnProcesar.Location = new System.Drawing.Point(1004, 504);
             this.btnProcesar.Name = "btnProcesar";
             this.btnProcesar.Size = new System.Drawing.Size(105, 23);
             this.btnProcesar.TabIndex = 123;
             this.btnProcesar.Text = "Procesar Solicitud";
             this.btnProcesar.UseVisualStyleBackColor = true;
             // 
-            // FrmCampaña
+            // FrmCampana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1038, 460);
+            this.ClientSize = new System.Drawing.Size(1130, 537);
             this.Controls.Add(this.btnProcesar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.groupBox3);
@@ -371,7 +373,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.resultadoImportacion);
-            this.Name = "FrmCampaña";
+            this.Name = "FrmCampana";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario de Campaña";
             this.Load += new System.EventHandler(this.FrmCampaña_Load);
             ((System.ComponentModel.ISupportInitialize)(this.resultadoImportacion)).EndInit();
@@ -402,7 +405,7 @@
         private System.Windows.Forms.Label lblImportacionCampana;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbCampañaOrigenMarketing;
         private System.Windows.Forms.ComboBox cbRelacOrigen;
         private System.Windows.Forms.ComboBox cbOrigen;
         private System.Windows.Forms.Button btnAgregarSubCampana;

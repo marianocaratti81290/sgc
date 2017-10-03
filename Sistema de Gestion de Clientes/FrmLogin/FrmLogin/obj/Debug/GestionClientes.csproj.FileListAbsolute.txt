@@ -59,4 +59,5 @@ C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLog
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Debug\FrmLogin.FrmInformeVeraz.resources
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Debug\FrmLogin.FrmInformeClientesNuevos.resources
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Debug\FrmLogin.FrmModificarGestionCliente.resources
-C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Debug\FrmLogin.FrmCampaña.resources
+C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Debug\FrmLogin.FrmAgregarItemCampana.resources
+C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Debug\FrmLogin.FrmCampana.resources

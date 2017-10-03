@@ -1547,6 +1547,33 @@ namespace FrmLogin
 
         }
 
+        public static DataTable obtenerCampanaOrigenMarketingCorrespondiente(string relacOrigen)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("obtenerCampanaRelacMarketing_q_sp", Comun.establecerConexion);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@descripcionRelac", relacOrigen);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
         public static void ModificarPermisosUsuarioI(string usr, string formulario)
         {
             try
@@ -1970,6 +1997,35 @@ namespace FrmLogin
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@dni", dni);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        public static DataTable agregarCampanaMarketingRelac(string relac ,string item)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("agregarItemSegunRelac_i_sp", Comun.establecerConexion);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@relac", relac);
+
+                cmd.Parameters.AddWithValue("@item", item);
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
 

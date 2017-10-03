@@ -337,7 +337,7 @@ namespace FrmLogin
 
         private void importarCampañaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new FrmCampaña().ShowDialog();
+            new FrmCampana().ShowDialog();
         }
 
         
