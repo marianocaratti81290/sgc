@@ -31,3 +31,8 @@ C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLog
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.pdb
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\GestionClientes.csprojResolveAssemblyReference.cache
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmModificarCliente.resources
+C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmAgregarItemCampana.resources
+C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmCampana.resources
+C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmInformeClientesNuevos.resources
+C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmInformeVeraz.resources
+C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmModificarGestionCliente.resources

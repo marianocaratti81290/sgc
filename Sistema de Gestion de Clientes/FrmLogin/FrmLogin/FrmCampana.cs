@@ -22,6 +22,7 @@ namespace FrmLogin
         public static string RelacNewItem;
         private void btnImportar_Click(object sender, EventArgs e)
         {
+            resultadoImportacion.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             int size = -1;
             openFileDialog1.Filter = "Text files (*.csv)|*.csv|All files (*.*)|*.*";
             DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
@@ -41,11 +42,20 @@ namespace FrmLogin
 
                     try
                     {
-                        DataTable dtVentas = new DataTable("Ventas");
+                        DataTable dtCampana = new DataTable("Campana");
 
-                        dtVentas.Columns.Add("nombre", typeof(String));
-                        dtVentas.Columns.Add("apellido", typeof(String));
-                       
+                        dtCampana.Columns.Add("FECHA_OPERACION", typeof(String));
+                        dtCampana.Columns.Add("DNI", typeof(String));
+                        dtCampana.Columns.Add("E-MAIL", typeof(String));
+                        dtCampana.Columns.Add("NOMBRE", typeof(String));
+                        dtCampana.Columns.Add("CIUDAD", typeof(String));
+                        dtCampana.Columns.Add("TELEFONO", typeof(String));
+                        dtCampana.Columns.Add("USUARIO_OPERACION", typeof(String));
+                        dtCampana.Columns.Add("USUARIO_GESTION", typeof(String));
+                        dtCampana.Columns.Add("SUCURSAL", typeof(String));
+                        dtCampana.Columns.Add("ORIGEN", typeof(String));
+                        dtCampana.Columns.Add("TIPO", typeof(String));
+                        dtCampana.Columns.Add("CAMPANA", typeof(String));
 
                         if (System.IO.File.Exists(txtRuta.Text))
                         {
@@ -56,7 +66,7 @@ namespace FrmLogin
                                 {
                                     string[] campos = Linea.Split(',');
 
-                                    if (campos.Length == 2)
+                                    if (campos.Length != 0)
                                     {
                                         // Ya puedo acceder al archivo
                                         // lo tengo separado por ,
@@ -81,49 +91,42 @@ namespace FrmLogin
                                          * 
                                          * */
 
-                                     /*   Brl.importarGestionUsuario(campos[0], // fecha leads
-                                            campos[1], // dni
-                                            campos[2], // email
-                                            campos[3], // nombre
-                                            campos[4], // ciudad
-                                            campos[5], // telefono              
-                                            cbUsuarios.Text, // usr que se le asigna esta gestion
+                                        //  Brl.importarGestionUsuario(campos[0], // fecha leads
+                                        //campos[1], // dni
+                                        //campos[2], // email
+                                        //campos[3], // nombre
+                                        //campos[4], // ciudad
+                                        //campos[5], // telefono              
+                                        //    cbUsuarios.Text, // usr que se le asigna esta gestion
+                                        //  FrmAccesoSistema.UsuarioPermiso, //usr logeo
+                                        //cbSucursales.Text, // sucursal asignada
+                                        //cbOrigen.Text,                                            
+                                        //cbCampañaOrigenMarketing.Text);
+
+
+                                        dtCampana.Rows.Add(campos[0], campos[1], campos[2], campos[3], campos[4], campos[5], cbUsuarios.Text, // usr que se le asigna esta gestion
                                             FrmAccesoSistema.UsuarioPermiso, //usr logeo
                                             cbSucursales.Text, // sucursal asignada
                                             cbOrigen.Text,
-                                            cbOrigen.Text,
+                                            cbRelacOrigen.Text,
                                             cbCampañaOrigenMarketing.Text);
-
-
-                                        dtVentas.Rows.Add(campos[0], campos[1]);*/
                                     }
                                 }
 
-                                if (dtVentas.Rows.Count > 0)
+                                if (dtCampana.Rows.Count > 0)
                                 {
-                                    resultadoImportacion.DataSource = dtVentas;
+                                    resultadoImportacion.DataSource = dtCampana;
 
-                                    using (SqlBulkCopy sqlBulkCopy = new SqlBulkCopy("Data Source=192.168.1.1; Initial Catalog=Ventas; User ID=usuario; Password=*******;"))
-                                    {
-                                        sqlBulkCopy.DestinationTableName = "ListaVentas";
-
-                                        sqlBulkCopy.ColumnMappings.Add("nombre", "nombre");
-                                        sqlBulkCopy.ColumnMappings.Add("apellido", "apellido");
-                                      
-                                        sqlBulkCopy.WriteToServer(dtVentas);
-
-                                        MessageBox.Show("oky doky");
-                                    }
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Formato o Ventas No Valido. Compruebe y vuela a ingresar el Ventas!");
+                                    MessageBox.Show("No se ingresaron datos");
                                 }
                             }
                         }
                         else
                         {
-                            MessageBox.Show("No existe el Ventas!");
+                            MessageBox.Show("Error al realizar la operacion, los campos no se pudieron procesar");
                         }
                     }
                     catch (Exception ex)
@@ -132,17 +135,17 @@ namespace FrmLogin
                     }
 
 
-                    
+
 
                 }
                 catch (IOException)
                 {
                 }
             }
-           
+
         }
 
-       
+
         private void FrmCampaña_Load(object sender, EventArgs e)
         {
 
@@ -160,7 +163,7 @@ namespace FrmLogin
         private void cbRelacOrigen_MouseDown(object sender, MouseEventArgs e)
         {
             string valor = ((System.Data.DataRowView)cbOrigen.SelectedItem).Row.ItemArray[0].ToString();
-             
+
             cbRelacOrigen.DataSource = Brl.obtenerOrigenCorrespondiente(valor);
             //indicamos el valor de los miembros
             cbRelacOrigen.ValueMember = "descripcion";
@@ -168,7 +171,7 @@ namespace FrmLogin
             cbRelacOrigen.DisplayMember = "descripcion";
 
             RelacNewItem = cbRelacOrigen.Text;
-        
+
         }
 
         private void cbUsuarios_MouseDown(object sender, MouseEventArgs e)
@@ -177,7 +180,7 @@ namespace FrmLogin
             //indicamos el valor de los miembros
             cbUsuarios.ValueMember = "nombre";
             //se indica el valor a desplegar en el combobox
-            cbUsuarios.DisplayMember = "apyn"; 
+            cbUsuarios.DisplayMember = "apyn";
         }
 
         private void cbSucursales_MouseDown(object sender, MouseEventArgs e)
@@ -186,7 +189,7 @@ namespace FrmLogin
             //indicamos el valor de los miembros
             cbSucursales.ValueMember = "nombre";
             //se indica el valor a desplegar en el combobox
-            cbSucursales.DisplayMember = "nombre"; 
+            cbSucursales.DisplayMember = "nombre";
         }
 
         private void cbCampañaOrigenMarketing_MouseDown(object sender, MouseEventArgs e)
@@ -196,7 +199,7 @@ namespace FrmLogin
             //indicamos el valor de los miembros
             cbCampañaOrigenMarketing.ValueMember = "descripcion";
             //se indica el valor a desplegar en el combobox
-            cbCampañaOrigenMarketing.DisplayMember = "descripcion"; 
+            cbCampañaOrigenMarketing.DisplayMember = "descripcion";
         }
 
         private void btnAgregarSubCampana_Click(object sender, EventArgs e)
@@ -205,10 +208,56 @@ namespace FrmLogin
             new FrmAgregarItemCampana().ShowDialog();
         }
 
-          
-
-      
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
+        private void btnProcesar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Esta seguro que desea realizar la operacion", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                if (resultadoImportacion.SelectedRows.Count != 0)
+                {
+
+                    try
+                    {
+
+                        if (resultadoImportacion.Rows.Count > 0)
+                        {
+                            // falta declarar variables y pasarla a la capa brl para luego cargarlas en bd 
+                            //en bd agregar dos campos: estado (pendiente y realizado) y ver si es necesario otro para tener control de la gestion  
+                            //                txtNombre.Text = (dgvGrillaSucursales[1, dgvGrillaSucursales.CurrentCell.RowIndex].Value.ToString());
+                            //                txtDireccion.Text = (dgvGrillaSucursales[2, dgvGrillaSucursales.CurrentCell.RowIndex].Value.ToString());
+                            //                dtpFechaAlta.Text = (dgvGrillaSucursales[3, dgvGrillaSucursales.CurrentCell.RowIndex].Value.ToString());
+
+                            //                txtTelefono.Text = (dgvGrillaSucursales[5, dgvGrillaSucursales.CurrentCell.RowIndex].Value.ToString());                       
+                            //                txtObservacion.Text = (dgvGrillaSucursales[9, dgvGrillaSucursales.CurrentCell.RowIndex].Value.ToString());
+                            //                dtpContrato.Text = (dgvGrillaSucursales[8, dgvGrillaSucursales.CurrentCell.RowIndex].Value.ToString());                    
+
+                        }
+                            
+                                          
+                            }
+
+                    catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+
+
+
+                        }
+
+
+
+
+                    }
+
+                }
+            }
+        }
     
-}
+

@@ -2043,6 +2043,56 @@ namespace FrmLogin
 
         }
 
+
+        public static void importarGestionUsuario(string fechaOper,
+           string dni,
+           string email,
+           string nombre,
+           string ciudad,
+           string telefono,
+           string usuarioAsig,
+           string usuarioPermis,
+           string suc,
+           string origen,
+           string relac,
+           string campana
+
+          )
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("", Comun.establecerConexion);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@dni", fechaOper);
+                cmd.Parameters.AddWithValue("@identificacion", dni);
+                cmd.Parameters.AddWithValue("@operacion", email);
+                cmd.Parameters.AddWithValue("@tipoPrestamo", nombre);
+                cmd.Parameters.AddWithValue("@origen", ciudad);
+                cmd.Parameters.AddWithValue("@relacOrigen", telefono);
+                cmd.Parameters.AddWithValue("@importe", usuarioAsig);
+                cmd.Parameters.AddWithValue("@plazo", usuarioPermis);
+                cmd.Parameters.AddWithValue("@cbplazo", suc);
+                cmd.Parameters.AddWithValue("@estado", origen);
+                cmd.Parameters.AddWithValue("@estado", relac);
+                cmd.Parameters.AddWithValue("@estado", campana);
+
+                Comun.establecerConexion.Open();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                cmd.ExecuteReader().Close();
+                Comun.establecerConexion.Close();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
     }
 }
     

@@ -34,9 +34,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.resultadoImportacion = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblArchivosSinProcesar = new System.Windows.Forms.Label();
             this.lblArchivosProcesados = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblImportacionCampana = new System.Windows.Forms.Label();
@@ -67,7 +65,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 34);
+            this.label1.Location = new System.Drawing.Point(19, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 0;
@@ -75,7 +73,7 @@
             // 
             // btnImportar
             // 
-            this.btnImportar.Location = new System.Drawing.Point(305, 29);
+            this.btnImportar.Location = new System.Drawing.Point(306, 34);
             this.btnImportar.Name = "btnImportar";
             this.btnImportar.Size = new System.Drawing.Size(75, 23);
             this.btnImportar.TabIndex = 1;
@@ -85,7 +83,7 @@
             // 
             // txtRuta
             // 
-            this.txtRuta.Location = new System.Drawing.Point(97, 29);
+            this.txtRuta.Location = new System.Drawing.Point(97, 36);
             this.txtRuta.Name = "txtRuta";
             this.txtRuta.ReadOnly = true;
             this.txtRuta.Size = new System.Drawing.Size(202, 20);
@@ -100,14 +98,13 @@
             this.resultadoImportacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.resultadoImportacion.Location = new System.Drawing.Point(12, 311);
             this.resultadoImportacion.Name = "resultadoImportacion";
+            this.resultadoImportacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.resultadoImportacion.Size = new System.Drawing.Size(1104, 161);
             this.resultadoImportacion.TabIndex = 3;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblArchivosSinProcesar);
             this.groupBox1.Controls.Add(this.lblArchivosProcesados);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnImportar);
@@ -119,37 +116,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Proceso de importacion de campaña";
             // 
-            // lblArchivosSinProcesar
-            // 
-            this.lblArchivosSinProcesar.AutoSize = true;
-            this.lblArchivosSinProcesar.Location = new System.Drawing.Point(147, 111);
-            this.lblArchivosSinProcesar.Name = "lblArchivosSinProcesar";
-            this.lblArchivosSinProcesar.Size = new System.Drawing.Size(16, 13);
-            this.lblArchivosSinProcesar.TabIndex = 6;
-            this.lblArchivosSinProcesar.Text = "...";
-            // 
             // lblArchivosProcesados
             // 
             this.lblArchivosProcesados.AutoSize = true;
-            this.lblArchivosProcesados.Location = new System.Drawing.Point(147, 82);
+            this.lblArchivosProcesados.Location = new System.Drawing.Point(150, 80);
             this.lblArchivosProcesados.Name = "lblArchivosProcesados";
             this.lblArchivosProcesados.Size = new System.Drawing.Size(16, 13);
             this.lblArchivosProcesados.TabIndex = 5;
             this.lblArchivosProcesados.Text = "...";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 111);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Archivos sin procesar:";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 82);
+            this.label3.Location = new System.Drawing.Point(19, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 13);
             this.label3.TabIndex = 3;
@@ -350,6 +329,7 @@
             this.btnSalir.TabIndex = 122;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnProcesar
             // 
@@ -359,6 +339,7 @@
             this.btnProcesar.TabIndex = 123;
             this.btnProcesar.Text = "Procesar Solicitud";
             this.btnProcesar.UseVisualStyleBackColor = true;
+            this.btnProcesar.Click += new System.EventHandler(this.btnProcesar_Click);
             // 
             // FrmCampana
             // 
@@ -397,9 +378,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DataGridView resultadoImportacion;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblArchivosSinProcesar;
         private System.Windows.Forms.Label lblArchivosProcesados;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblImportacionCampana;
