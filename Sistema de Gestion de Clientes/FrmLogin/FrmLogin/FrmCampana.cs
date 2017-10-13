@@ -228,13 +228,35 @@ namespace FrmLogin
                         {
                             // falta declarar variables y pasarla a la capa brl para luego cargarlas en bd 
                             //en bd agregar dos campos: estado (pendiente y realizado) y ver si es necesario otro para tener control de la gestion  
-                            //                txtNombre.Text = (dgvGrillaSucursales[1, dgvGrillaSucursales.CurrentCell.RowIndex].Value.ToString());
-                            //                txtDireccion.Text = (dgvGrillaSucursales[2, dgvGrillaSucursales.CurrentCell.RowIndex].Value.ToString());
-                            //                dtpFechaAlta.Text = (dgvGrillaSucursales[3, dgvGrillaSucursales.CurrentCell.RowIndex].Value.ToString());
+                                            
+                            string fechaOperacion= "";
+                            string dni = "";
+                            string email = "";
+                            string nombre = "";
+                            string ciudad ="";
+                            string telefono = "";
+                            string userAdmin = FrmAccesoSistema.UsuarioPermiso;
+                            
+                            
+                            fechaOperacion = (resultadoImportacion[0, resultadoImportacion.CurrentCell.RowIndex].Value.ToString());
+                            dni = (resultadoImportacion[1, resultadoImportacion.CurrentCell.RowIndex].Value.ToString());
+                            email = (resultadoImportacion[2, resultadoImportacion.CurrentCell.RowIndex].Value.ToString());
+                            nombre = (resultadoImportacion[3, resultadoImportacion.CurrentCell.RowIndex].Value.ToString());                       
+                            ciudad = (resultadoImportacion[4, resultadoImportacion.CurrentCell.RowIndex].Value.ToString());
+                            telefono = (resultadoImportacion[5, resultadoImportacion.CurrentCell.RowIndex].Value.ToString());
 
-                            //                txtTelefono.Text = (dgvGrillaSucursales[5, dgvGrillaSucursales.CurrentCell.RowIndex].Value.ToString());                       
-                            //                txtObservacion.Text = (dgvGrillaSucursales[9, dgvGrillaSucursales.CurrentCell.RowIndex].Value.ToString());
-                            //                dtpContrato.Text = (dgvGrillaSucursales[8, dgvGrillaSucursales.CurrentCell.RowIndex].Value.ToString());                    
+                            Brl.generarCampanaCsv(Convert.ToDateTime(fechaOperacion), 
+                                dni, 
+                                email, 
+                                nombre, 
+                                ciudad, 
+                                telefono, 
+                                cbUsuarios.Text, 
+                                userAdmin, 
+                                cbSucursales.Text,
+                                cbOrigen.Text,
+                                cbRelacOrigen.Text,
+                                cbCampañaOrigenMarketing.Text);
 
                         }
                             

@@ -1987,6 +1987,56 @@ namespace FrmLogin
             }
 
         }
+
+        public static void generarCampanaCsv (DateTime fechaOperacion,
+         string dni,
+         string email,
+         string nombre,
+         string ciudad,
+         string telefono,
+         string userCampana,
+         string userAdmin,
+         string Sucursal,
+         string Origen,
+         string RelacOrigen,
+         string CampanaMarketing
+
+        )
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("campanaCsv_i_sp", Comun.establecerConexion);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@fechaOperacion", fechaOperacion);
+                cmd.Parameters.AddWithValue("@dni", dni);
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@nombre", nombre);
+                cmd.Parameters.AddWithValue("@ciudad", ciudad);
+                cmd.Parameters.AddWithValue("@telefono", telefono);
+                cmd.Parameters.AddWithValue("@usuarioOperador", userCampana);
+                cmd.Parameters.AddWithValue("@usuarioAdmin", userAdmin);
+                cmd.Parameters.AddWithValue("@sucursal", Sucursal);
+                cmd.Parameters.AddWithValue("@origen", Origen);
+                cmd.Parameters.AddWithValue("@tipo", RelacOrigen);
+                cmd.Parameters.AddWithValue("@campana", CampanaMarketing);
+
+                Comun.establecerConexion.Open();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                cmd.ExecuteReader().Close();
+                Comun.establecerConexion.Close();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
         public static DataTable obtenerHistorialCliente(string dni)
         {
             try
