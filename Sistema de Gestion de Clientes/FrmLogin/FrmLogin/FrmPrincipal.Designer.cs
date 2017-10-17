@@ -316,7 +316,8 @@
             this.dgvCampanaUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCampanaUsuario.Location = new System.Drawing.Point(13, 16);
             this.dgvCampanaUsuario.Name = "dgvCampanaUsuario";
-            this.dgvCampanaUsuario.Size = new System.Drawing.Size(746, 124);
+            this.dgvCampanaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCampanaUsuario.Size = new System.Drawing.Size(323, 628);
             this.dgvCampanaUsuario.TabIndex = 1;
             // 
             // gbCampana
@@ -324,10 +325,10 @@
             this.gbCampana.Controls.Add(this.dgvCampanaUsuario);
             this.gbCampana.Location = new System.Drawing.Point(12, 67);
             this.gbCampana.Name = "gbCampana";
-            this.gbCampana.Size = new System.Drawing.Size(765, 146);
+            this.gbCampana.Size = new System.Drawing.Size(352, 650);
             this.gbCampana.TabIndex = 2;
             this.gbCampana.TabStop = false;
-            this.gbCampana.Text = "Campaña de clientes ";
+            this.gbCampana.Text = "Proceso de campañas ";
             // 
             // btnHabilitarCamp
             // 
@@ -335,7 +336,7 @@
             this.btnHabilitarCamp.Name = "btnHabilitarCamp";
             this.btnHabilitarCamp.Size = new System.Drawing.Size(109, 23);
             this.btnHabilitarCamp.TabIndex = 3;
-            this.btnHabilitarCamp.Text = "Habilitar Campañas";
+            this.btnHabilitarCamp.Text = "Ver campañas";
             this.btnHabilitarCamp.UseVisualStyleBackColor = true;
             this.btnHabilitarCamp.Visible = false;
             this.btnHabilitarCamp.Click += new System.EventHandler(this.btnHabilitarCamp_Click);
@@ -346,7 +347,7 @@
             this.btnDesHabilitarCamp.Name = "btnDesHabilitarCamp";
             this.btnDesHabilitarCamp.Size = new System.Drawing.Size(128, 23);
             this.btnDesHabilitarCamp.TabIndex = 5;
-            this.btnDesHabilitarCamp.Text = "Deshabilitar Campañas";
+            this.btnDesHabilitarCamp.Text = "Ocultar Campañas";
             this.btnDesHabilitarCamp.UseVisualStyleBackColor = true;
             this.btnDesHabilitarCamp.Click += new System.EventHandler(this.btnDesHabilitarCamp_Click);
             // 
