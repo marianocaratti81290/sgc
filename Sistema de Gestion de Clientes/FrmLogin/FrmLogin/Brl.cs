@@ -439,6 +439,33 @@ namespace FrmLogin
 
         }
 
+        public static DataTable obtenercampanaXusuario(string usr)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("obtenercampanaXusuario_q_sp", Comun.establecerConexion);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@usr", usr);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
         public static DataTable obtenerInformes(string dni)
         {
             try

@@ -273,6 +273,16 @@ namespace FrmLogin
             }
 
 
+            //----------------------------------------- CAMPAÑA POR USUARIO -----------------------------------------------------------
+
+            dgvCampanaUsuario.DataSource=  Brl.obtenercampanaXusuario(FrmAccesoSistema.UsuarioPermiso);
+            dgvCampanaUsuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+      
+
+
+
+       
+
         }
 
         private void consultaDeUsuariosToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -338,6 +348,20 @@ namespace FrmLogin
         private void importarCampañaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FrmCampana().ShowDialog();
+        }
+
+        private void btnHabilitarCamp_Click(object sender, EventArgs e)
+        {
+            gbCampana.Visible = true;
+            btnHabilitarCamp.Visible = false;
+            btnDesHabilitarCamp.Visible = true;
+        }
+
+        private void btnDesHabilitarCamp_Click(object sender, EventArgs e)
+        {
+            gbCampana.Visible = false;
+            btnDesHabilitarCamp.Visible = false;
+            btnHabilitarCamp.Visible = true;
         }
 
         

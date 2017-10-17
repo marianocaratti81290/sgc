@@ -59,9 +59,13 @@
             this.permisosPorUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.permisosPorFuncionalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCampanaUsuario = new System.Windows.Forms.DataGridView();
+            this.gbCampana = new System.Windows.Forms.GroupBox();
+            this.btnHabilitarCamp = new System.Windows.Forms.Button();
+            this.btnDesHabilitarCamp = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCampanaUsuario)).BeginInit();
+            this.gbCampana.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -307,13 +311,44 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // dataGridView1
+            // dgvCampanaUsuario
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 71);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(328, 346);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvCampanaUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCampanaUsuario.Location = new System.Drawing.Point(13, 16);
+            this.dgvCampanaUsuario.Name = "dgvCampanaUsuario";
+            this.dgvCampanaUsuario.Size = new System.Drawing.Size(746, 124);
+            this.dgvCampanaUsuario.TabIndex = 1;
+            // 
+            // gbCampana
+            // 
+            this.gbCampana.Controls.Add(this.dgvCampanaUsuario);
+            this.gbCampana.Location = new System.Drawing.Point(12, 67);
+            this.gbCampana.Name = "gbCampana";
+            this.gbCampana.Size = new System.Drawing.Size(765, 146);
+            this.gbCampana.TabIndex = 2;
+            this.gbCampana.TabStop = false;
+            this.gbCampana.Text = "Campaña de clientes ";
+            // 
+            // btnHabilitarCamp
+            // 
+            this.btnHabilitarCamp.Location = new System.Drawing.Point(12, 38);
+            this.btnHabilitarCamp.Name = "btnHabilitarCamp";
+            this.btnHabilitarCamp.Size = new System.Drawing.Size(109, 23);
+            this.btnHabilitarCamp.TabIndex = 3;
+            this.btnHabilitarCamp.Text = "Habilitar Campañas";
+            this.btnHabilitarCamp.UseVisualStyleBackColor = true;
+            this.btnHabilitarCamp.Visible = false;
+            this.btnHabilitarCamp.Click += new System.EventHandler(this.btnHabilitarCamp_Click);
+            // 
+            // btnDesHabilitarCamp
+            // 
+            this.btnDesHabilitarCamp.Location = new System.Drawing.Point(127, 38);
+            this.btnDesHabilitarCamp.Name = "btnDesHabilitarCamp";
+            this.btnDesHabilitarCamp.Size = new System.Drawing.Size(128, 23);
+            this.btnDesHabilitarCamp.TabIndex = 5;
+            this.btnDesHabilitarCamp.Text = "Deshabilitar Campañas";
+            this.btnDesHabilitarCamp.UseVisualStyleBackColor = true;
+            this.btnDesHabilitarCamp.Click += new System.EventHandler(this.btnDesHabilitarCamp_Click);
             // 
             // FrmPrincipal
             // 
@@ -322,7 +357,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1008, 729);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnDesHabilitarCamp);
+            this.Controls.Add(this.btnHabilitarCamp);
+            this.Controls.Add(this.gbCampana);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -333,7 +370,8 @@
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCampanaUsuario)).EndInit();
+            this.gbCampana.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,6 +409,9 @@
         private System.Windows.Forms.ToolStripMenuItem modificarGestionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem campañasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importarCampañaToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCampanaUsuario;
+        private System.Windows.Forms.GroupBox gbCampana;
+        private System.Windows.Forms.Button btnHabilitarCamp;
+        private System.Windows.Forms.Button btnDesHabilitarCamp;
     }
 }
