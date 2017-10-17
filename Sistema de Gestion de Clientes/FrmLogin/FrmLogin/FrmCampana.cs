@@ -176,11 +176,11 @@ namespace FrmLogin
 
         private void cbUsuarios_MouseDown(object sender, MouseEventArgs e)
         {
-            cbUsuarios.DataSource = Brl.obtenerUsuarioCb();
+            cbUsuarios.DataSource = Brl.obtenerUsuarioSistema();
             //indicamos el valor de los miembros
-            cbUsuarios.ValueMember = "nombre";
+            cbUsuarios.ValueMember = "usrSinEncript";
             //se indica el valor a desplegar en el combobox
-            cbUsuarios.DisplayMember = "apyn";
+            cbUsuarios.DisplayMember = "usrSinEncript";
         }
 
         private void cbSucursales_MouseDown(object sender, MouseEventArgs e)
@@ -244,6 +244,128 @@ namespace FrmLogin
                             nombre = (resultadoImportacion[3, resultadoImportacion.CurrentCell.RowIndex].Value.ToString());                       
                             ciudad = (resultadoImportacion[4, resultadoImportacion.CurrentCell.RowIndex].Value.ToString());
                             telefono = (resultadoImportacion[5, resultadoImportacion.CurrentCell.RowIndex].Value.ToString());
+
+
+                        //    -------------------------------------Prueba----------------------------------------------------
+                            resultadoImportacion.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                            int size = -1;
+                            openFileDialog1.Filter = "Text files (*.csv)|*.csv|All files (*.*)|*.*";
+                            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
+                            
+                            if (result == DialogResult.OK) // Test result.
+                            {
+                                string file = openFileDialog1.FileName;
+                                try
+                                {
+                                    string text = File.ReadAllText(file);
+
+                                    txtRuta.Text = file;
+
+                                    size = text.Length;
+
+                                    //Importar ruta del archivo csv a tblbd
+
+
+                                    try
+                                    {
+                                        DataTable dtCampana = new DataTable("Campana");
+
+                                        dtCampana.Columns.Add("FECHA_OPERACION", typeof(String));
+                                        dtCampana.Columns.Add("DNI", typeof(String));
+                                        dtCampana.Columns.Add("E-MAIL", typeof(String));
+                                        dtCampana.Columns.Add("NOMBRE", typeof(String));
+                                        dtCampana.Columns.Add("CIUDAD", typeof(String));
+                                        dtCampana.Columns.Add("TELEFONO", typeof(String));
+                                        dtCampana.Columns.Add("USUARIO_OPERACION", typeof(String));
+                                        dtCampana.Columns.Add("USUARIO_GESTION", typeof(String));
+                                        dtCampana.Columns.Add("SUCURSAL", typeof(String));
+                                        dtCampana.Columns.Add("ORIGEN", typeof(String));
+                                        dtCampana.Columns.Add("TIPO", typeof(String));
+                                        dtCampana.Columns.Add("CAMPANA", typeof(String));
+
+                                        if (System.IO.File.Exists(txtRuta.Text))
+                                        {
+                                            using (StreamReader Leer = new StreamReader("C:\\prueba\\Libro1.csv"))
+                                            {
+                                                string Linea;
+                                                while ((Linea = Leer.ReadLine()) != null)
+                                                {
+                                                    string[] campos = Linea.Split(',');
+
+                                                    if (campos.Length != 0)
+                                                    {                                                                                                         
+                                                        //parametros que tiene la grilla
+                                                        dtCampana.Rows.Add(campos[0], campos[1], campos[2], campos[3], campos[4], campos[5], cbUsuarios.Text, // usr que se le asigna esta gestion
+                                                            FrmAccesoSistema.UsuarioPermiso, //usr logeo
+                                                            cbSucursales.Text, // sucursal asignada
+                                                            cbOrigen.Text,
+                                                            cbRelacOrigen.Text,
+                                                            cbCampañaOrigenMarketing.Text);
+
+                                                        //guardo los campos de la grilla desde el inicio hasta el final 
+                                                        Brl.generarCampanaCsv(Convert.ToDateTime(campos[0]),campos[1], campos[2], campos[3], campos[4], campos[5],
+                                                            cbUsuarios.Text, // usr que se le asigna esta gestion
+                                                            FrmAccesoSistema.UsuarioPermiso, //usr logeo
+                                                            cbSucursales.Text, // sucursal asignada
+                                                            cbOrigen.Text,
+                                                            cbRelacOrigen.Text,
+                                                            cbCampañaOrigenMarketing.Text);
+                                //dni,
+                                //email,
+                                //nombre,
+                                //ciudad,
+                                //telefono,
+                                //cbUsuarios.Text,
+                                //userAdmin,
+                                //cbSucursales.Text,
+                                //cbOrigen.Text,
+                                //cbRelacOrigen.Text,
+                                //cbCampañaOrigenMarketing.Text);
+
+
+
+
+                                                    }
+                                                }
+
+                                                if (dtCampana.Rows.Count > 0)
+                                                {
+                                                    resultadoImportacion.DataSource = dtCampana;
+
+                                                }
+                                                else
+                                                {
+                                                    MessageBox.Show("No se ingresaron datos");
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Error al realizar la operacion, los campos no se pudieron procesar");
+                                        }
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show(ex.Message);
+                                    }
+
+
+
+
+                                }
+                                catch (IOException)
+                                {
+                                }
+                            }
+
+
+
+
+                            //   ------------------------------prueba --------------------------------------------------------
+
+                            
+
+
 
                             Brl.generarCampanaCsv(Convert.ToDateTime(fechaOperacion), 
                                 dni, 

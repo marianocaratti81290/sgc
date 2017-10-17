@@ -162,11 +162,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(907, 50);
+            this.label2.Location = new System.Drawing.Point(946, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "label2";
+            this.label2.Visible = false;
             // 
             // groupBox6
             // 

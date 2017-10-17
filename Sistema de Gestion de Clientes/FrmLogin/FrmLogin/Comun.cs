@@ -9,7 +9,7 @@ namespace FrmLogin
 {
         public static class Comun
         {
-            public static SqlConnection establecerConexion = new SqlConnection("data source = 192.168.5.82\\SQLEXPRESS; initial catalog = GestionClientes; user id = mariano; password = 1520hgW4");
+            public static SqlConnection establecerConexion = new SqlConnection("data source = 192.168.5.62\\SQLEXPRESS; initial catalog = GestionClientes; user id = mariano; password = 1520hgW4");
         }
       
 

@@ -49,6 +49,8 @@
             this.bajaDeSucursalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaDeSucursalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarEstadoDeSucursalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.campañasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importarCampañaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.objetivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.objetivosPorUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,9 +59,9 @@
             this.permisosPorUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.permisosPorFuncionalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.campañasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importarCampañaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -230,6 +232,21 @@
             this.cambiarEstadoDeSucursalesToolStripMenuItem.Text = "Cambiar estado de Sucursales";
             this.cambiarEstadoDeSucursalesToolStripMenuItem.Click += new System.EventHandler(this.cambiarEstadoDeSucursalesToolStripMenuItem_Click);
             // 
+            // campañasToolStripMenuItem
+            // 
+            this.campañasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.importarCampañaToolStripMenuItem});
+            this.campañasToolStripMenuItem.Name = "campañasToolStripMenuItem";
+            this.campañasToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.campañasToolStripMenuItem.Text = "Campañas";
+            // 
+            // importarCampañaToolStripMenuItem
+            // 
+            this.importarCampañaToolStripMenuItem.Name = "importarCampañaToolStripMenuItem";
+            this.importarCampañaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.importarCampañaToolStripMenuItem.Text = "Importar campaña";
+            this.importarCampañaToolStripMenuItem.Click += new System.EventHandler(this.importarCampañaToolStripMenuItem_Click);
+            // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
@@ -290,20 +307,13 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // campañasToolStripMenuItem
+            // dataGridView1
             // 
-            this.campañasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.importarCampañaToolStripMenuItem});
-            this.campañasToolStripMenuItem.Name = "campañasToolStripMenuItem";
-            this.campañasToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.campañasToolStripMenuItem.Text = "Campañas";
-            // 
-            // importarCampañaToolStripMenuItem
-            // 
-            this.importarCampañaToolStripMenuItem.Name = "importarCampañaToolStripMenuItem";
-            this.importarCampañaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.importarCampañaToolStripMenuItem.Text = "Importar campaña";
-            this.importarCampañaToolStripMenuItem.Click += new System.EventHandler(this.importarCampañaToolStripMenuItem_Click);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(23, 71);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(328, 346);
+            this.dataGridView1.TabIndex = 1;
             // 
             // FrmPrincipal
             // 
@@ -312,6 +322,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -322,6 +333,7 @@
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,5 +371,6 @@
         private System.Windows.Forms.ToolStripMenuItem modificarGestionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem campañasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importarCampañaToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

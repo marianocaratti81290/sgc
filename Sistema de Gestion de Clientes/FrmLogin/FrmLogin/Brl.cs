@@ -256,6 +256,32 @@ namespace FrmLogin
 
         }
 
+        public static DataTable obtenerUsuarioSistema()
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("obtenerUsuariosSistema_q_sp", Comun.establecerConexion);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
         public static DataTable obtenerUsuarioCb()
         {
             try
