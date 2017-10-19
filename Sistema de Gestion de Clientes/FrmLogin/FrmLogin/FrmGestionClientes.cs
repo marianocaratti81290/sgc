@@ -88,7 +88,7 @@ namespace FrmLogin
             }
             dgvGrillaHistorialCliente.DataSource = Brl.obtenerHistorialCliente(txtDni.Text);
 
-            if (FrmPrincipal.SolicitoGestion = "1")
+            if (FrmPrincipal.SolicitoGestion == 1)
             {
                 txtDni.Text = FrmPrincipal.dniCliente;
                 dgvGrillaHistorialCliente.DataSource = Brl.obtenerHistorialCliente(txtDni.Text);
@@ -218,9 +218,17 @@ namespace FrmLogin
                                                                         cbEstado.Text
                                                                        );
 
+
+
                                             MessageBox.Show("La gestion se guardo con exito");
 
                                             dgvGrillaHistorialCliente.DataSource = Brl.obtenerHistorialCliente(txtDni.Text);
+
+                                            if (FrmPrincipal.SolicitoGestion==1)
+                                            {
+                                                Brl.cambiarEstadoCampanaFinalizado(FrmPrincipal.dniCliente);
+
+                                            }
                                         }
         }
 

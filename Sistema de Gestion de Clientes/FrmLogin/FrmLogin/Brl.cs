@@ -97,6 +97,32 @@ namespace FrmLogin
 
         }
 
+        public static void cambiarEstadoCampanaFinalizado(string dniCliente)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("finalizarGestionCamp_u_sp", Comun.establecerConexion);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@dni", dniCliente);                 
+             
+                Comun.establecerConexion.Open();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                cmd.ExecuteReader().Close();
+                Comun.establecerConexion.Close();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
         public static void guardarInformeCliente(string dni,
             string veraz,
             string siisa,           
