@@ -319,6 +319,7 @@
             this.dgvCampanaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCampanaUsuario.Size = new System.Drawing.Size(323, 628);
             this.dgvCampanaUsuario.TabIndex = 1;
+            this.dgvCampanaUsuario.DoubleClick += new System.EventHandler(this.dgvCampanaUsuario_DoubleClick);
             // 
             // gbCampana
             // 

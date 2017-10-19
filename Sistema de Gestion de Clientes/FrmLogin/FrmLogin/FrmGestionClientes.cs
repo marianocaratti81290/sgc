@@ -87,6 +87,13 @@ namespace FrmLogin
                 dgvGrillaHistorialCliente.DataSource = Brl.obtenerHistorialCliente(txtDni.Text);
             }
             dgvGrillaHistorialCliente.DataSource = Brl.obtenerHistorialCliente(txtDni.Text);
+
+            if (FrmPrincipal.SolicitoGestion = "1")
+            {
+                txtDni.Text = FrmPrincipal.dniCliente;
+                dgvGrillaHistorialCliente.DataSource = Brl.obtenerHistorialCliente(txtDni.Text);
+            }
+            dgvGrillaHistorialCliente.DataSource = Brl.obtenerHistorialCliente(txtDni.Text);
             
         }
 

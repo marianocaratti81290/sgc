@@ -17,6 +17,9 @@ namespace FrmLogin
             InitializeComponent();
         }
 
+        public static int SolicitoGestion = 0;
+
+        public static string dniCliente = "";
         private void altaDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FrmNuevoUsuario().ShowDialog();
@@ -362,6 +365,20 @@ namespace FrmLogin
             gbCampana.Visible = false;
             btnDesHabilitarCamp.Visible = false;
             btnHabilitarCamp.Visible = true;
+        }
+
+        private void dgvCampanaUsuario_DoubleClick(object sender, EventArgs e)
+        {
+            if (dgvCampanaUsuario.SelectedRows.Count != 0)
+            {
+                dniCliente = (dgvCampanaUsuario[2, dgvCampanaUsuario.CurrentCell.RowIndex].Value.ToString());
+                SolicitoGestion = 1;
+                new FrmGestionClientes().ShowDialog();
+            }
+
+            SolicitoGestion = 0;
+
+
         }
 
         
