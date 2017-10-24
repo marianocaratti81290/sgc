@@ -36,6 +36,34 @@ namespace FrmLogin
 
         }
 
+        public static int estadoGestionCamp(string dni)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("estadoGestionCamp_q_sp", Comun.establecerConexion);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@dni", dni);
+ 
+                SqlParameter existe = new SqlParameter("@existe", SqlDbType.Int);
+                existe.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(existe);
+                Comun.establecerConexion.Open();
+                cmd.ExecuteReader().Close();
+                Comun.establecerConexion.Close();
+                return (int)existe.Value;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+
+
+
+
         public static void agregarUsuario(string nombre,
             string apellido,
             string dni,
@@ -122,6 +150,8 @@ namespace FrmLogin
             }
 
         }
+
+      
 
         public static void guardarInformeCliente(string dni,
             string veraz,

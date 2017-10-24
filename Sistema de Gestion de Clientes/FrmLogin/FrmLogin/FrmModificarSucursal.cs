@@ -58,7 +58,7 @@ namespace FrmLogin
                         
                         txtTelefono.Text = (dgvGrillaSucursales[5, dgvGrillaSucursales.CurrentCell.RowIndex].Value.ToString());                       
                         txtObservacion.Text = (dgvGrillaSucursales[9, dgvGrillaSucursales.CurrentCell.RowIndex].Value.ToString());
-                        dtpContrato.Text = (dgvGrillaSucursales[8, dgvGrillaSucursales.CurrentCell.RowIndex].Value.ToString());
+                       
                         string Estado = (dgvGrillaSucursales[6, dgvGrillaSucursales.CurrentCell.RowIndex].Value.ToString());
                         string TpoContrato = (dgvGrillaSucursales[7, dgvGrillaSucursales.CurrentCell.RowIndex].Value.ToString());
                         
@@ -76,6 +76,7 @@ namespace FrmLogin
                             rbAlquilado.Checked = true;
                             dtpContrato.Visible= true;
                             label9.Visible=true;
+                            dtpContrato.Text = (dgvGrillaSucursales[8, dgvGrillaSucursales.CurrentCell.RowIndex].Value.ToString());
                             
                         }
                         else

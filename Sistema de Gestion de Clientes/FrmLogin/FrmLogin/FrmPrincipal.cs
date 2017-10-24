@@ -280,6 +280,7 @@ namespace FrmLogin
 
             dgvCampanaUsuario.DataSource=  Brl.obtenercampanaXusuario(FrmAccesoSistema.UsuarioPermiso);
             dgvCampanaUsuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            
       
 
 
@@ -373,7 +374,14 @@ namespace FrmLogin
             {
                 dniCliente = (dgvCampanaUsuario[2, dgvCampanaUsuario.CurrentCell.RowIndex].Value.ToString());
                 SolicitoGestion = 1;
-                new FrmGestionClientes().ShowDialog();
+                new FrmGestionClientes().ShowDialog();                             
+
+                int existe = Brl.estadoGestionCamp(FrmPrincipal.dniCliente);
+
+                if (existe == 1)
+                {
+                    dgvCampanaUsuario.DataSource = Brl.obtenercampanaXusuario(FrmAccesoSistema.UsuarioPermiso);
+                }
             }
 
             SolicitoGestion = 0;
