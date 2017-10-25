@@ -34,8 +34,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.resultadoImportacion = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblArchivosProcesados = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblImportacionCampana = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -56,6 +54,7 @@
             this.cbUsuarios = new System.Windows.Forms.ComboBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnProcesar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoImportacion)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -104,8 +103,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblArchivosProcesados);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnImportar);
             this.groupBox1.Controls.Add(this.txtRuta);
@@ -115,24 +113,6 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Proceso de importacion de campaña";
-            // 
-            // lblArchivosProcesados
-            // 
-            this.lblArchivosProcesados.AutoSize = true;
-            this.lblArchivosProcesados.Location = new System.Drawing.Point(150, 80);
-            this.lblArchivosProcesados.Name = "lblArchivosProcesados";
-            this.lblArchivosProcesados.Size = new System.Drawing.Size(16, 13);
-            this.lblArchivosProcesados.TabIndex = 5;
-            this.lblArchivosProcesados.Text = "...";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Archivos procesados:";
             // 
             // label2
             // 
@@ -341,6 +321,18 @@
             this.btnProcesar.UseVisualStyleBackColor = true;
             this.btnProcesar.Click += new System.EventHandler(this.btnProcesar_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(8, 84);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(373, 54);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "Nota: El archivo que se adjunta en dicho modulo debe estar con extension csv. El " +
+    "orden de las columnas son: fecha de operacion, dni cliente, email, nombre y apel" +
+    "lido, localidad y telefono";
+            // 
             // FrmCampana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,8 +370,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DataGridView resultadoImportacion;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblArchivosProcesados;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblImportacionCampana;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -400,5 +390,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RadioButton rbComercio;
         private System.Windows.Forms.RadioButton rbPrestamo;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
