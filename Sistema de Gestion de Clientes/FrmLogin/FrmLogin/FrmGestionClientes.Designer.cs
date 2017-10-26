@@ -70,11 +70,15 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrillaHistorialCliente)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -356,7 +360,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(747, 535);
+            this.btnGuardar.Location = new System.Drawing.Point(330, 153);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 142;
@@ -366,7 +370,7 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(647, 535);
+            this.btnVolver.Location = new System.Drawing.Point(230, 153);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(75, 23);
             this.btnVolver.TabIndex = 143;
@@ -391,14 +395,14 @@
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Location = new System.Drawing.Point(12, 380);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(811, 138);
+            this.groupBox4.Size = new System.Drawing.Size(358, 188);
             this.groupBox4.TabIndex = 144;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Informes";
             // 
             // txtSiisa
             // 
-            this.txtSiisa.Location = new System.Drawing.Point(78, 70);
+            this.txtSiisa.Location = new System.Drawing.Point(100, 56);
             this.txtSiisa.MaxLength = 5;
             this.txtSiisa.Name = "txtSiisa";
             this.txtSiisa.Size = new System.Drawing.Size(184, 20);
@@ -406,7 +410,7 @@
             // 
             // btnComentario2
             // 
-            this.btnComentario2.Location = new System.Drawing.Point(699, 63);
+            this.btnComentario2.Location = new System.Drawing.Point(305, 113);
             this.btnComentario2.Name = "btnComentario2";
             this.btnComentario2.Size = new System.Drawing.Size(21, 23);
             this.btnComentario2.TabIndex = 56;
@@ -416,7 +420,7 @@
             // 
             // btnComentario1
             // 
-            this.btnComentario1.Location = new System.Drawing.Point(699, 30);
+            this.btnComentario1.Location = new System.Drawing.Point(305, 83);
             this.btnComentario1.Name = "btnComentario1";
             this.btnComentario1.Size = new System.Drawing.Size(21, 23);
             this.btnComentario1.TabIndex = 55;
@@ -440,7 +444,7 @@
             "Sin antiguedad laboral",
             "Ya posee credito",
             "Percibe asignacion universal por hijo"});
-            this.cbComentario2.Location = new System.Drawing.Point(494, 99);
+            this.cbComentario2.Location = new System.Drawing.Point(100, 143);
             this.cbComentario2.Name = "cbComentario2";
             this.cbComentario2.Size = new System.Drawing.Size(184, 21);
             this.cbComentario2.TabIndex = 54;
@@ -463,7 +467,7 @@
             "Sin antiguedad laboral",
             "Ya posee credito",
             "Percibe asignacion universal por hijo"});
-            this.cbComentario1.Location = new System.Drawing.Point(494, 63);
+            this.cbComentario1.Location = new System.Drawing.Point(100, 113);
             this.cbComentario1.Name = "cbComentario1";
             this.cbComentario1.Size = new System.Drawing.Size(184, 21);
             this.cbComentario1.TabIndex = 53;
@@ -485,7 +489,7 @@
             "Sin antiguedad laboral",
             "Ya posee credito",
             "Percibe asignacion universal por hijo"});
-            this.cbComentario.Location = new System.Drawing.Point(494, 30);
+            this.cbComentario.Location = new System.Drawing.Point(100, 83);
             this.cbComentario.Name = "cbComentario";
             this.cbComentario.Size = new System.Drawing.Size(184, 21);
             this.cbComentario.TabIndex = 52;
@@ -493,7 +497,7 @@
             // lblComentario2
             // 
             this.lblComentario2.AutoSize = true;
-            this.lblComentario2.Location = new System.Drawing.Point(400, 102);
+            this.lblComentario2.Location = new System.Drawing.Point(6, 146);
             this.lblComentario2.Name = "lblComentario2";
             this.lblComentario2.Size = new System.Drawing.Size(77, 13);
             this.lblComentario2.TabIndex = 51;
@@ -503,7 +507,7 @@
             // lblComentario1
             // 
             this.lblComentario1.AutoSize = true;
-            this.lblComentario1.Location = new System.Drawing.Point(400, 66);
+            this.lblComentario1.Location = new System.Drawing.Point(6, 116);
             this.lblComentario1.Name = "lblComentario1";
             this.lblComentario1.Size = new System.Drawing.Size(77, 13);
             this.lblComentario1.TabIndex = 50;
@@ -523,7 +527,7 @@
             // 
             // txtScoreVeraz
             // 
-            this.txtScoreVeraz.Location = new System.Drawing.Point(78, 30);
+            this.txtScoreVeraz.Location = new System.Drawing.Point(100, 30);
             this.txtScoreVeraz.MaxLength = 5;
             this.txtScoreVeraz.Name = "txtScoreVeraz";
             this.txtScoreVeraz.Size = new System.Drawing.Size(184, 20);
@@ -532,7 +536,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(400, 33);
+            this.label12.Location = new System.Drawing.Point(6, 86);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(77, 13);
             this.label12.TabIndex = 44;
@@ -541,7 +545,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 73);
+            this.label13.Location = new System.Drawing.Point(6, 59);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(63, 13);
             this.label13.TabIndex = 43;
@@ -556,14 +560,42 @@
             this.label14.TabIndex = 42;
             this.label14.Text = "Score Veraz:";
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.textBox1);
+            this.groupBox5.Controls.Add(this.label15);
+            this.groupBox5.Controls.Add(this.btnVolver);
+            this.groupBox5.Controls.Add(this.btnGuardar);
+            this.groupBox5.Location = new System.Drawing.Point(406, 386);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(417, 182);
+            this.groupBox5.TabIndex = 145;
+            this.groupBox5.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 27);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(78, 13);
+            this.label15.TabIndex = 144;
+            this.label15.Text = "Observaciones";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(9, 50);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(402, 97);
+            this.textBox1.TabIndex = 145;
+            // 
             // FrmGestionClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(835, 580);
+            this.ClientSize = new System.Drawing.Size(835, 576);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -581,6 +613,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -630,5 +664,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label15;
     }
 }
