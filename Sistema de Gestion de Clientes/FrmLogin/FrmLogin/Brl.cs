@@ -549,6 +549,33 @@ namespace FrmLogin
 
         }
 
+        public static DataTable obtenerInformesClienteSeleccionado(string dni)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("consultarInformeClientes_q_sp", Comun.establecerConexion);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@dni", dni);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
         public static DataTable obtenerInformesNuevo(string dni)
         {
             try

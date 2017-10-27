@@ -61,6 +61,7 @@ namespace FrmLogin
                  else
                  {
                      buscarCliente();
+                     buscarInforme();
                  }
             }
         }
@@ -107,6 +108,7 @@ namespace FrmLogin
             else
             {
                 buscarCliente();
+                buscarInforme();
             }
             
             
@@ -121,8 +123,42 @@ namespace FrmLogin
             //txtAApyn.DisplayMember = "apyn";
                      
         }
-        
 
+        private void buscarInforme()
+        {
+
+
+            DataTable dtInforme = new DataTable();
+            dtInforme = Brl.obtenerInformesClienteSeleccionado(txtDni.Text);
+
+            if (dtInforme.Rows.Count > 0)
+            {
+
+                txtScoreVeraz.Text = dtInforme.Rows[0][1].ToString();
+                txtSiisa.Text = dtInforme.Rows[0][2].ToString();
+                cbComentario.Text = dtInforme.Rows[0][3].ToString();
+                cbComentario1.Text = dtInforme.Rows[0][4].ToString();
+                cbComentario2.Text = dtInforme.Rows[0][5].ToString();
+
+                if (cbComentario1.Text != "")
+                {
+                    lblComentario1.Visible = true;
+                    cbComentario1.Visible = true;
+                }
+
+                if (cbComentario2.Text != "")
+                {
+                    lblComentario2.Visible = true;
+                    cbComentario2.Visible = true;
+                }
+
+
+                    
+                  
+            }
+
+
+        }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (txtDni.Text == "")
