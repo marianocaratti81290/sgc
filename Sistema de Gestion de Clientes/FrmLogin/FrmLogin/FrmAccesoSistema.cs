@@ -78,7 +78,7 @@ namespace FrmLogin
 
                             if (existe == 1)
                             {
-                                Brl.guardoAccesoSistema(txtUsuario.Text);
+                             //   Brl.guardoAccesoSistema(txtUsuario.Text);
                                 this.Hide();
                                 new FrmPrincipal().ShowDialog();                                
                             }
