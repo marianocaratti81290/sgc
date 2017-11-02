@@ -343,7 +343,7 @@ namespace FrmLogin
             }
 
             
-                // ------------------------------------------- Modificar clientes ---------------------------------
+                // ------------------------------------------- consulta clientes ---------------------------------
 
             frm = "FrmConsultarCliente";
             existe = Brl.PermisosPuntualesLogeo(usr, frm);

@@ -488,8 +488,66 @@ namespace FrmLogin
                 {
                     checkPermisoUsuario.Checked = false;
                 }
-             
-                  
+
+                //cliente modificar 
+                frm = "FrmModificarClientes";
+                existe = Brl.PermisosPuntualesUsuarios(dni, frm);
+                if (existe == 1)
+                {
+                    checkModificarCliente.Checked = true;
+                }
+                else
+                {
+                    checkModificarCliente.Checked = false;
+                }
+
+                //cliente buscar 
+                frm = "FrmConsultarCliente";
+                existe = Brl.PermisosPuntualesUsuarios(dni, frm);
+                if (existe == 1)
+                {
+                    checkConsultaCliente.Checked = true;
+                }
+                else
+                {
+                    checkConsultaCliente.Checked = false;
+                }
+
+                //modificar gestion 
+                frm = "FrmModificarGestionCliente";
+                existe = Brl.PermisosPuntualesUsuarios(dni, frm);
+                if (existe == 1)
+                {
+                    checkModificarGestion.Checked = true;
+                }
+                else
+                {
+                    checkModificarGestion.Checked = false;
+                }
+
+                //campaña 
+                frm = "FrmCampana";
+                existe = Brl.PermisosPuntualesUsuarios(dni, frm);
+                if (existe == 1)
+                {
+                    checkImportarCampana.Checked = true;
+                }
+                else
+                {
+                    checkImportarCampana.Checked = false;
+                }
+
+                //objetivos x usuario 
+                frm = "FrmObjetivosXusuario";
+                existe = Brl.PermisosPuntualesUsuarios(dni, frm);
+                if (existe == 1)
+                {
+                    checkObjetivosUsuario.Checked = true;
+                }
+                else
+                {
+                    checkObjetivosUsuario.Checked = false;
+                }
                 
             }
         }
@@ -563,7 +621,7 @@ namespace FrmLogin
 
             if (checkModificarCliente.Checked == true)
             {
-                ModificarPermisoUsuarioI(dni, "FrmModificarClientes");
+                ModificarPermisoUsuarioI(dni, "FrmModificarCliente");
                 MessageBox.Show("Permiso Insertado con exito");
             }
             else
@@ -579,12 +637,12 @@ namespace FrmLogin
 
             if (checkConsultaCliente.Checked == true)
             {
-                ModificarPermisoUsuarioI(dni, "FrmConsultarClientes");
+                ModificarPermisoUsuarioI(dni, "FrmConsultarCliente");
                 MessageBox.Show("Permiso Insertado con exito");
             }
             else
             {
-                ModificarPermisoUsuarioD(dni, "FrmConsultarClientes");
+                ModificarPermisoUsuarioD(dni, "FrmConsultarCliente");
                 MessageBox.Show("Permiso DesHabilitado con exito");
             }
         }
