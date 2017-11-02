@@ -58,8 +58,6 @@
             this.btnVolver = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtSiisa = new System.Windows.Forms.TextBox();
-            this.btnComentario2 = new System.Windows.Forms.Button();
-            this.btnComentario1 = new System.Windows.Forms.Button();
             this.cbComentario2 = new System.Windows.Forms.ComboBox();
             this.cbComentario1 = new System.Windows.Forms.ComboBox();
             this.cbComentario = new System.Windows.Forms.ComboBox();
@@ -71,8 +69,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrillaHistorialCliente)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -381,8 +378,6 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.txtSiisa);
-            this.groupBox4.Controls.Add(this.btnComentario2);
-            this.groupBox4.Controls.Add(this.btnComentario1);
             this.groupBox4.Controls.Add(this.cbComentario2);
             this.groupBox4.Controls.Add(this.cbComentario1);
             this.groupBox4.Controls.Add(this.cbComentario);
@@ -408,28 +403,8 @@
             this.txtSiisa.Size = new System.Drawing.Size(184, 20);
             this.txtSiisa.TabIndex = 57;
             // 
-            // btnComentario2
-            // 
-            this.btnComentario2.Location = new System.Drawing.Point(305, 113);
-            this.btnComentario2.Name = "btnComentario2";
-            this.btnComentario2.Size = new System.Drawing.Size(21, 23);
-            this.btnComentario2.TabIndex = 56;
-            this.btnComentario2.Text = "+";
-            this.btnComentario2.UseVisualStyleBackColor = true;
-            this.btnComentario2.Visible = false;
-            // 
-            // btnComentario1
-            // 
-            this.btnComentario1.Location = new System.Drawing.Point(305, 83);
-            this.btnComentario1.Name = "btnComentario1";
-            this.btnComentario1.Size = new System.Drawing.Size(21, 23);
-            this.btnComentario1.TabIndex = 55;
-            this.btnComentario1.Text = "+";
-            this.btnComentario1.UseVisualStyleBackColor = true;
-            // 
             // cbComentario2
             // 
-            this.cbComentario2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbComentario2.FormattingEnabled = true;
             this.cbComentario2.Items.AddRange(new object[] {
             "",
@@ -448,11 +423,9 @@
             this.cbComentario2.Name = "cbComentario2";
             this.cbComentario2.Size = new System.Drawing.Size(184, 21);
             this.cbComentario2.TabIndex = 54;
-            this.cbComentario2.Visible = false;
             // 
             // cbComentario1
             // 
-            this.cbComentario1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbComentario1.FormattingEnabled = true;
             this.cbComentario1.Items.AddRange(new object[] {
             "",
@@ -471,7 +444,6 @@
             this.cbComentario1.Name = "cbComentario1";
             this.cbComentario1.Size = new System.Drawing.Size(184, 21);
             this.cbComentario1.TabIndex = 53;
-            this.cbComentario1.Visible = false;
             // 
             // cbComentario
             // 
@@ -562,32 +534,24 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox1);
-            this.groupBox5.Controls.Add(this.label15);
+            this.groupBox5.Controls.Add(this.txtObservaciones);
             this.groupBox5.Controls.Add(this.btnVolver);
             this.groupBox5.Controls.Add(this.btnGuardar);
-            this.groupBox5.Location = new System.Drawing.Point(406, 386);
+            this.groupBox5.Location = new System.Drawing.Point(406, 380);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(417, 182);
+            this.groupBox5.Size = new System.Drawing.Size(417, 188);
             this.groupBox5.TabIndex = 145;
             this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Observaciones";
             // 
-            // label15
+            // txtObservaciones
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 27);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(78, 13);
-            this.label15.TabIndex = 144;
-            this.label15.Text = "Observaciones";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(9, 50);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(402, 97);
-            this.textBox1.TabIndex = 145;
+            this.txtObservaciones.Location = new System.Drawing.Point(9, 24);
+            this.txtObservaciones.MaxLength = 200;
+            this.txtObservaciones.Multiline = true;
+            this.txtObservaciones.Name = "txtObservaciones";
+            this.txtObservaciones.Size = new System.Drawing.Size(402, 123);
+            this.txtObservaciones.TabIndex = 145;
             // 
             // FrmGestionClientes
             // 
@@ -652,8 +616,6 @@
         private System.Windows.Forms.ComboBox cbPlazo;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox txtSiisa;
-        private System.Windows.Forms.Button btnComentario2;
-        private System.Windows.Forms.Button btnComentario1;
         private System.Windows.Forms.ComboBox cbComentario2;
         private System.Windows.Forms.ComboBox cbComentario1;
         private System.Windows.Forms.ComboBox cbComentario;
@@ -665,7 +627,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtObservaciones;
     }
 }

@@ -36,6 +36,19 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.checkConsultaCliente = new System.Windows.Forms.CheckBox();
+            this.checkModificarCliente = new System.Windows.Forms.CheckBox();
+            this.checkClientes = new System.Windows.Forms.CheckBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.checkModificarGestion = new System.Windows.Forms.CheckBox();
+            this.CheckGestiones = new System.Windows.Forms.CheckBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.checkObjetivosUsuario = new System.Windows.Forms.CheckBox();
+            this.checkObjetivosSucursales = new System.Windows.Forms.CheckBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.checkImportarCampana = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.checkPermisoUsuario = new System.Windows.Forms.CheckBox();
@@ -54,12 +67,13 @@
             this.checkUsuarioAlta = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.checkReportes = new System.Windows.Forms.CheckBox();
-            this.CheckGestiones = new System.Windows.Forms.CheckBox();
-            this.checkClientes = new System.Windows.Forms.CheckBox();
-            this.btnVolver = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsuarios)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -70,7 +84,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(356, 33);
+            this.label1.Location = new System.Drawing.Point(249, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(336, 23);
             this.label1.TabIndex = 117;
@@ -85,7 +99,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 75);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1002, 182);
+            this.groupBox1.Size = new System.Drawing.Size(863, 182);
             this.groupBox1.TabIndex = 118;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda de usuarios";
@@ -118,11 +132,11 @@
             this.dvgUsuarios.AllowUserToAddRows = false;
             this.dvgUsuarios.AllowUserToOrderColumns = true;
             this.dvgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgUsuarios.Location = new System.Drawing.Point(6, 54);
+            this.dvgUsuarios.Location = new System.Drawing.Point(10, 54);
             this.dvgUsuarios.Name = "dvgUsuarios";
             this.dvgUsuarios.ReadOnly = true;
             this.dvgUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgUsuarios.Size = new System.Drawing.Size(990, 122);
+            this.dvgUsuarios.Size = new System.Drawing.Size(841, 122);
             this.dvgUsuarios.TabIndex = 5;
             this.dvgUsuarios.SelectionChanged += new System.EventHandler(this.dvgUsuarios_SelectionChanged);
             // 
@@ -146,6 +160,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnVolver);
+            this.groupBox2.Controls.Add(this.groupBox10);
+            this.groupBox2.Controls.Add(this.groupBox9);
+            this.groupBox2.Controls.Add(this.groupBox8);
+            this.groupBox2.Controls.Add(this.groupBox7);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.groupBox6);
             this.groupBox2.Controls.Add(this.groupBox5);
@@ -153,16 +172,158 @@
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Location = new System.Drawing.Point(13, 263);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1001, 207);
+            this.groupBox2.Size = new System.Drawing.Size(862, 248);
             this.groupBox2.TabIndex = 119;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Permisos de usuario";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(780, 215);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.TabIndex = 121;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.checkConsultaCliente);
+            this.groupBox10.Controls.Add(this.checkModificarCliente);
+            this.groupBox10.Controls.Add(this.checkClientes);
+            this.groupBox10.Location = new System.Drawing.Point(15, 125);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(197, 113);
+            this.groupBox10.TabIndex = 11;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Clientes";
+            // 
+            // checkConsultaCliente
+            // 
+            this.checkConsultaCliente.AutoSize = true;
+            this.checkConsultaCliente.Location = new System.Drawing.Point(23, 75);
+            this.checkConsultaCliente.Name = "checkConsultaCliente";
+            this.checkConsultaCliente.Size = new System.Drawing.Size(117, 17);
+            this.checkConsultaCliente.TabIndex = 2;
+            this.checkConsultaCliente.Text = "Consulta de Cliente";
+            this.checkConsultaCliente.UseVisualStyleBackColor = true;
+            this.checkConsultaCliente.Click += new System.EventHandler(this.checkConsultaCliente_Click);
+            // 
+            // checkModificarCliente
+            // 
+            this.checkModificarCliente.AutoSize = true;
+            this.checkModificarCliente.Location = new System.Drawing.Point(23, 48);
+            this.checkModificarCliente.Name = "checkModificarCliente";
+            this.checkModificarCliente.Size = new System.Drawing.Size(104, 17);
+            this.checkModificarCliente.TabIndex = 1;
+            this.checkModificarCliente.Text = "Modificar Cliente";
+            this.checkModificarCliente.UseVisualStyleBackColor = true;
+            this.checkModificarCliente.Click += new System.EventHandler(this.checkModificarCliente_Click);
+            // 
+            // checkClientes
+            // 
+            this.checkClientes.AutoSize = true;
+            this.checkClientes.Location = new System.Drawing.Point(23, 24);
+            this.checkClientes.Name = "checkClientes";
+            this.checkClientes.Size = new System.Drawing.Size(93, 17);
+            this.checkClientes.TabIndex = 0;
+            this.checkClientes.Text = "Nuevo Cliente";
+            this.checkClientes.UseVisualStyleBackColor = true;
+            this.checkClientes.CheckedChanged += new System.EventHandler(this.checkClientes_CheckedChanged);
+            this.checkClientes.Click += new System.EventHandler(this.checkClientes_Click);
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.checkModificarGestion);
+            this.groupBox9.Controls.Add(this.CheckGestiones);
+            this.groupBox9.Location = new System.Drawing.Point(15, 20);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(197, 96);
+            this.groupBox9.TabIndex = 10;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Gestion Clientes";
+            // 
+            // checkModificarGestion
+            // 
+            this.checkModificarGestion.AutoSize = true;
+            this.checkModificarGestion.Location = new System.Drawing.Point(23, 55);
+            this.checkModificarGestion.Name = "checkModificarGestion";
+            this.checkModificarGestion.Size = new System.Drawing.Size(111, 17);
+            this.checkModificarGestion.TabIndex = 2;
+            this.checkModificarGestion.Text = "Modificar Gestion ";
+            this.checkModificarGestion.UseVisualStyleBackColor = true;
+            this.checkModificarGestion.Click += new System.EventHandler(this.checkModificarGestion_Click);
+            // 
+            // CheckGestiones
+            // 
+            this.CheckGestiones.AutoSize = true;
+            this.CheckGestiones.Location = new System.Drawing.Point(23, 31);
+            this.CheckGestiones.Name = "CheckGestiones";
+            this.CheckGestiones.Size = new System.Drawing.Size(100, 17);
+            this.CheckGestiones.TabIndex = 1;
+            this.CheckGestiones.Text = "Nueva Gestion ";
+            this.CheckGestiones.UseVisualStyleBackColor = true;
+            this.CheckGestiones.Click += new System.EventHandler(this.CheckGestiones_Click);
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.checkObjetivosUsuario);
+            this.groupBox8.Controls.Add(this.checkObjetivosSucursales);
+            this.groupBox8.Location = new System.Drawing.Point(658, 113);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(197, 77);
+            this.groupBox8.TabIndex = 9;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Objetivos";
+            // 
+            // checkObjetivosUsuario
+            // 
+            this.checkObjetivosUsuario.AutoSize = true;
+            this.checkObjetivosUsuario.Location = new System.Drawing.Point(20, 44);
+            this.checkObjetivosUsuario.Name = "checkObjetivosUsuario";
+            this.checkObjetivosUsuario.Size = new System.Drawing.Size(125, 17);
+            this.checkObjetivosUsuario.TabIndex = 2;
+            this.checkObjetivosUsuario.Text = "Objetivos por usuario";
+            this.checkObjetivosUsuario.UseVisualStyleBackColor = true;
+            this.checkObjetivosUsuario.Click += new System.EventHandler(this.checkObjetivosUsuario_Click);
+            // 
+            // checkObjetivosSucursales
+            // 
+            this.checkObjetivosSucursales.AutoSize = true;
+            this.checkObjetivosSucursales.Location = new System.Drawing.Point(21, 21);
+            this.checkObjetivosSucursales.Name = "checkObjetivosSucursales";
+            this.checkObjetivosSucursales.Size = new System.Drawing.Size(141, 17);
+            this.checkObjetivosSucursales.TabIndex = 1;
+            this.checkObjetivosSucursales.Text = "Objetivos por sucursales";
+            this.checkObjetivosSucursales.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.checkImportarCampana);
+            this.groupBox7.Location = new System.Drawing.Point(240, 185);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(182, 53);
+            this.groupBox7.TabIndex = 8;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Campaña";
+            // 
+            // checkImportarCampana
+            // 
+            this.checkImportarCampana.AutoSize = true;
+            this.checkImportarCampana.Location = new System.Drawing.Point(21, 21);
+            this.checkImportarCampana.Name = "checkImportarCampana";
+            this.checkImportarCampana.Size = new System.Drawing.Size(112, 17);
+            this.checkImportarCampana.TabIndex = 1;
+            this.checkImportarCampana.Text = "Importar Campaña";
+            this.checkImportarCampana.UseVisualStyleBackColor = true;
+            this.checkImportarCampana.Click += new System.EventHandler(this.checkImportarCampana_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(946, 16);
+            this.label2.Location = new System.Drawing.Point(820, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 7;
@@ -173,9 +334,9 @@
             // 
             this.groupBox6.Controls.Add(this.checkPermisoUsuario);
             this.groupBox6.Controls.Add(this.checkPermisoFuncionalidad);
-            this.groupBox6.Location = new System.Drawing.Point(617, 35);
+            this.groupBox6.Location = new System.Drawing.Point(658, 20);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(197, 97);
+            this.groupBox6.Size = new System.Drawing.Size(197, 85);
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Permisos";
@@ -209,7 +370,7 @@
             this.groupBox5.Controls.Add(this.checkSucursalBaja);
             this.groupBox5.Controls.Add(this.checkSucursalModificacion);
             this.groupBox5.Controls.Add(this.checkSucursalAlta);
-            this.groupBox5.Location = new System.Drawing.Point(408, 35);
+            this.groupBox5.Location = new System.Drawing.Point(452, 19);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(182, 159);
             this.groupBox5.TabIndex = 5;
@@ -278,7 +439,7 @@
             this.groupBox4.Controls.Add(this.checkUsuarioBaja);
             this.groupBox4.Controls.Add(this.checkUsuarioModificacion);
             this.groupBox4.Controls.Add(this.checkUsuarioAlta);
-            this.groupBox4.Location = new System.Drawing.Point(195, 35);
+            this.groupBox4.Location = new System.Drawing.Point(240, 20);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(182, 159);
             this.groupBox4.TabIndex = 3;
@@ -288,7 +449,7 @@
             // checkUsuarioConsulta
             // 
             this.checkUsuarioConsulta.AutoSize = true;
-            this.checkUsuarioConsulta.Location = new System.Drawing.Point(20, 127);
+            this.checkUsuarioConsulta.Location = new System.Drawing.Point(15, 126);
             this.checkUsuarioConsulta.Name = "checkUsuarioConsulta";
             this.checkUsuarioConsulta.Size = new System.Drawing.Size(124, 17);
             this.checkUsuarioConsulta.TabIndex = 4;
@@ -300,7 +461,7 @@
             // checkUsuarioHistorico
             // 
             this.checkUsuarioHistorico.AutoSize = true;
-            this.checkUsuarioHistorico.Location = new System.Drawing.Point(20, 103);
+            this.checkUsuarioHistorico.Location = new System.Drawing.Point(15, 102);
             this.checkUsuarioHistorico.Name = "checkUsuarioHistorico";
             this.checkUsuarioHistorico.Size = new System.Drawing.Size(158, 17);
             this.checkUsuarioHistorico.TabIndex = 3;
@@ -311,7 +472,7 @@
             // checkUsuarioBaja
             // 
             this.checkUsuarioBaja.AutoSize = true;
-            this.checkUsuarioBaja.Location = new System.Drawing.Point(20, 80);
+            this.checkUsuarioBaja.Location = new System.Drawing.Point(15, 79);
             this.checkUsuarioBaja.Name = "checkUsuarioBaja";
             this.checkUsuarioBaja.Size = new System.Drawing.Size(104, 17);
             this.checkUsuarioBaja.TabIndex = 2;
@@ -322,7 +483,7 @@
             // checkUsuarioModificacion
             // 
             this.checkUsuarioModificacion.AutoSize = true;
-            this.checkUsuarioModificacion.Location = new System.Drawing.Point(20, 56);
+            this.checkUsuarioModificacion.Location = new System.Drawing.Point(15, 55);
             this.checkUsuarioModificacion.Name = "checkUsuarioModificacion";
             this.checkUsuarioModificacion.Size = new System.Drawing.Size(143, 17);
             this.checkUsuarioModificacion.TabIndex = 1;
@@ -333,7 +494,7 @@
             // checkUsuarioAlta
             // 
             this.checkUsuarioAlta.AutoSize = true;
-            this.checkUsuarioAlta.Location = new System.Drawing.Point(20, 32);
+            this.checkUsuarioAlta.Location = new System.Drawing.Point(15, 31);
             this.checkUsuarioAlta.Name = "checkUsuarioAlta";
             this.checkUsuarioAlta.Size = new System.Drawing.Size(101, 17);
             this.checkUsuarioAlta.TabIndex = 0;
@@ -344,11 +505,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.checkReportes);
-            this.groupBox3.Controls.Add(this.CheckGestiones);
-            this.groupBox3.Controls.Add(this.checkClientes);
-            this.groupBox3.Location = new System.Drawing.Point(17, 35);
+            this.groupBox3.Location = new System.Drawing.Point(455, 185);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(155, 120);
+            this.groupBox3.Size = new System.Drawing.Size(179, 53);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Generales";
@@ -356,7 +515,7 @@
             // checkReportes
             // 
             this.checkReportes.AutoSize = true;
-            this.checkReportes.Location = new System.Drawing.Point(20, 80);
+            this.checkReportes.Location = new System.Drawing.Point(17, 21);
             this.checkReportes.Name = "checkReportes";
             this.checkReportes.Size = new System.Drawing.Size(69, 17);
             this.checkReportes.TabIndex = 2;
@@ -364,45 +523,11 @@
             this.checkReportes.UseVisualStyleBackColor = true;
             this.checkReportes.Click += new System.EventHandler(this.checkReportes_Click);
             // 
-            // CheckGestiones
-            // 
-            this.CheckGestiones.AutoSize = true;
-            this.CheckGestiones.Location = new System.Drawing.Point(20, 56);
-            this.CheckGestiones.Name = "CheckGestiones";
-            this.CheckGestiones.Size = new System.Drawing.Size(73, 17);
-            this.CheckGestiones.TabIndex = 1;
-            this.CheckGestiones.Text = "Gestiones";
-            this.CheckGestiones.UseVisualStyleBackColor = true;
-            this.CheckGestiones.Click += new System.EventHandler(this.CheckGestiones_Click);
-            // 
-            // checkClientes
-            // 
-            this.checkClientes.AutoSize = true;
-            this.checkClientes.Location = new System.Drawing.Point(20, 32);
-            this.checkClientes.Name = "checkClientes";
-            this.checkClientes.Size = new System.Drawing.Size(63, 17);
-            this.checkClientes.TabIndex = 0;
-            this.checkClientes.Text = "Clientes";
-            this.checkClientes.UseVisualStyleBackColor = true;
-            this.checkClientes.CheckedChanged += new System.EventHandler(this.checkClientes_CheckedChanged);
-            this.checkClientes.Click += new System.EventHandler(this.checkClientes_Click);
-            // 
-            // btnVolver
-            // 
-            this.btnVolver.Location = new System.Drawing.Point(933, 476);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(75, 23);
-            this.btnVolver.TabIndex = 121;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
             // FrmPermisosUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1026, 516);
-            this.Controls.Add(this.btnVolver);
+            this.ClientSize = new System.Drawing.Size(887, 513);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -415,6 +540,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsuarios)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -459,5 +592,15 @@
         private System.Windows.Forms.CheckBox checkClientes;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.CheckBox checkObjetivosUsuario;
+        private System.Windows.Forms.CheckBox checkObjetivosSucursales;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.CheckBox checkImportarCampana;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.CheckBox checkModificarGestion;
+        private System.Windows.Forms.CheckBox checkConsultaCliente;
+        private System.Windows.Forms.CheckBox checkModificarCliente;
     }
 }

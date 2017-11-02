@@ -112,11 +112,11 @@ namespace FrmLogin
             existe = Brl.PermisosPuntualesLogeo(usr, frm);
             if (existe == 1)
             {
-                gestionesToolStripMenuItem.Visible = true;
+                nuevaGestionToolStripMenuItem.Visible = true;
             }
             else
             {
-                gestionesToolStripMenuItem.Visible = false;
+                nuevaGestionToolStripMenuItem.Visible = false;
             }
 
             //Permisos frmNuevoUsuario
@@ -275,6 +275,59 @@ namespace FrmLogin
                 permisosPorFuncionalidadToolStripMenuItem.Visible = false;
             }
 
+           // -----------------------------------------campañasToolStripMenuItem ----------------------------------------
+
+            frm = "FrmCampana";
+            existe = Brl.PermisosPuntualesLogeo(usr, frm);
+            if (existe == 1)
+            {
+                importarCampañaToolStripMenuItem.Visible = true;
+            }
+            else
+            {
+                importarCampañaToolStripMenuItem.Visible = false;
+            }
+
+           // ------------------------------------------- objetivosPorUsuarioToolStripMenuItem ---------------------------------
+
+            frm = "FrmObjetivosXusuario";
+            existe = Brl.PermisosPuntualesLogeo(usr, frm);
+            if (existe == 1)
+            {
+                objetivosPorUsuarioToolStripMenuItem.Visible = true;
+            }
+            else
+            {
+                objetivosPorUsuarioToolStripMenuItem.Visible = false;
+            }
+
+            // ------------------------------------------- objetivosPorSucursalesToolStripMenuItem ---------------------------------
+
+            frm = "FrmObjetivosXSucursales";
+            existe = Brl.PermisosPuntualesLogeo(usr, frm);
+            if (existe == 1)
+            {
+                objetivosPorSucursalToolStripMenuItem.Visible = true;
+            }
+            else
+            {
+                objetivosPorSucursalToolStripMenuItem.Visible = false;
+            }
+
+            
+
+                // ------------------------------------------- Modificar gestion clientes ---------------------------------
+
+            frm = "FrmModificarGestionCliente";
+            existe = Brl.PermisosPuntualesLogeo(usr, frm);
+            if (existe == 1)
+            {
+                modificarGestionToolStripMenuItem.Visible = true;
+            }
+            else
+            {
+                modificarGestionToolStripMenuItem.Visible = false;
+            }
 
             //----------------------------------------- CAMPAÑA POR USUARIO -----------------------------------------------------------
 
@@ -386,6 +439,11 @@ namespace FrmLogin
 
             SolicitoGestion = 0;
 
+
+        }
+
+        private void objetivosPorSucursalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
 

@@ -137,10 +137,10 @@ namespace FrmLogin
                 txtScoreVeraz.Text = dtInforme.Rows[0][1].ToString();
                 txtSiisa.Text = dtInforme.Rows[0][2].ToString();
                 cbComentario.Text = dtInforme.Rows[0][3].ToString();
-                cbComentario1.Text = dtInforme.Rows[0][4].ToString();
-                cbComentario2.Text = dtInforme.Rows[0][5].ToString();
+                cbComentario1.Text = dtInforme.Rows[0][5].ToString();
+                cbComentario2.Text = dtInforme.Rows[0][6].ToString();
 
-                if (cbComentario1.Text != "")
+                if (cbComentario.Text != "")
                 {
                     lblComentario1.Visible = true;
                     cbComentario1.Visible = true;
@@ -251,7 +251,8 @@ namespace FrmLogin
                                                                         txtImporte.Text,
                                                                         txtPlazo.Text,
                                                                         cbPlazo.Text,
-                                                                        cbEstado.Text
+                                                                        cbEstado.Text,
+                                                                        txtObservaciones.Text
                                                                        );
 
 

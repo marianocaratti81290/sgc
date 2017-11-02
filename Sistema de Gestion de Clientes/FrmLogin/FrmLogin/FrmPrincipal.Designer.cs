@@ -279,6 +279,7 @@
             this.objetivosPorSucursalToolStripMenuItem.Name = "objetivosPorSucursalToolStripMenuItem";
             this.objetivosPorSucursalToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.objetivosPorSucursalToolStripMenuItem.Text = "Objetivos por sucursal";
+            this.objetivosPorSucursalToolStripMenuItem.Click += new System.EventHandler(this.objetivosPorSucursalToolStripMenuItem_Click);
             // 
             // permisoToolStripMenuItem
             // 

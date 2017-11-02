@@ -2041,7 +2041,8 @@ namespace FrmLogin
            string importe,
            string plazo,
            string cbPlazo,
-           string estado
+           string estado,
+           string observaciones
            
           )
         {
@@ -2062,6 +2063,7 @@ namespace FrmLogin
                 cmd.Parameters.AddWithValue("@plazo", plazo);
                 cmd.Parameters.AddWithValue("@cbplazo", cbPlazo);
                 cmd.Parameters.AddWithValue("@estado", estado);
+                cmd.Parameters.AddWithValue("@observaciones", observaciones);
                
                 Comun.establecerConexion.Open();
 

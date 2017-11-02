@@ -507,6 +507,90 @@ namespace FrmLogin
         private void checkUsuarioConsulta_CheckedChanged(object sender, EventArgs e)
         {
 
-        }      
+        }
+
+        private void checkImportarCampana_Click(object sender, EventArgs e)
+        {
+            string dni = Convert.ToString((dvgUsuarios[2, dvgUsuarios.CurrentCell.RowIndex].Value));
+
+            if (checkImportarCampana.Checked == true)
+            {
+                ModificarPermisoUsuarioI(dni, "FrmCampana");
+                MessageBox.Show("Permiso Insertado con exito");
+            }
+            else
+            {
+                ModificarPermisoUsuarioD(dni, "FrmCampana");
+                MessageBox.Show("Permiso DesHabilitado con exito");
+            }
+        }
+
+        private void checkObjetivosUsuario_Click(object sender, EventArgs e)
+        {
+            string dni = Convert.ToString((dvgUsuarios[2, dvgUsuarios.CurrentCell.RowIndex].Value));
+
+            if (checkObjetivosUsuario.Checked == true)
+            {
+                ModificarPermisoUsuarioI(dni, "FrmObjetivosXusuario");
+                MessageBox.Show("Permiso Insertado con exito");
+            }
+            else
+            {
+                ModificarPermisoUsuarioD(dni, "FrmObjetivosXusuario");
+                MessageBox.Show("Permiso DesHabilitado con exito");
+            }
+        }
+
+        private void checkModificarGestion_Click(object sender, EventArgs e)
+        {
+            string dni = Convert.ToString((dvgUsuarios[2, dvgUsuarios.CurrentCell.RowIndex].Value));
+
+            if (checkModificarGestion.Checked == true)
+            {
+                ModificarPermisoUsuarioI(dni, "FrmModificarGestionCliente");
+                MessageBox.Show("Permiso Insertado con exito");
+            }
+            else
+            {
+                ModificarPermisoUsuarioD(dni, "FrmModificarGestionCliente");
+                MessageBox.Show("Permiso DesHabilitado con exito");
+            }
+        }
+
+        private void checkModificarCliente_Click(object sender, EventArgs e)
+        {
+            string dni = Convert.ToString((dvgUsuarios[2, dvgUsuarios.CurrentCell.RowIndex].Value));
+
+            if (checkModificarCliente.Checked == true)
+            {
+                ModificarPermisoUsuarioI(dni, "FrmModificarClientes");
+                MessageBox.Show("Permiso Insertado con exito");
+            }
+            else
+            {
+                ModificarPermisoUsuarioD(dni, "FrmModificarCliente");
+                MessageBox.Show("Permiso DesHabilitado con exito");
+            }
+        }
+
+        private void checkConsultaCliente_Click(object sender, EventArgs e)
+        {
+            string dni = Convert.ToString((dvgUsuarios[2, dvgUsuarios.CurrentCell.RowIndex].Value));
+
+            if (checkConsultaCliente.Checked == true)
+            {
+                ModificarPermisoUsuarioI(dni, "FrmConsultarClientes");
+                MessageBox.Show("Permiso Insertado con exito");
+            }
+            else
+            {
+                ModificarPermisoUsuarioD(dni, "FrmConsultarClientes");
+                MessageBox.Show("Permiso DesHabilitado con exito");
+            }
+        }
+
+        
+
+        
     }
 }
