@@ -329,6 +329,34 @@ namespace FrmLogin
                 modificarGestionToolStripMenuItem.Visible = false;
             }
 
+            // ------------------------------------------- Modificar clientes ---------------------------------
+
+            frm = "FrmModificarCliente";
+            existe = Brl.PermisosPuntualesLogeo(usr, frm);
+            if (existe == 1)
+            {
+                modificarClienteToolStripMenuItem.Visible = true;
+            }
+            else
+            {
+                modificarClienteToolStripMenuItem.Visible = false;
+            }
+
+            
+                // ------------------------------------------- Modificar clientes ---------------------------------
+
+            frm = "FrmConsultarCliente";
+            existe = Brl.PermisosPuntualesLogeo(usr, frm);
+            if (existe == 1)
+            {
+                consultarClienteToolStripMenuItem.Visible = true;
+            }
+            else
+            {
+                consultarClienteToolStripMenuItem.Visible = false;
+            }
+
+
             //----------------------------------------- CAMPAÑA POR USUARIO -----------------------------------------------------------
 
             dgvCampanaUsuario.DataSource=  Brl.obtenercampanaXusuario(FrmAccesoSistema.UsuarioPermiso);
