@@ -59,7 +59,7 @@ namespace FrmLogin
 
                         if (System.IO.File.Exists(txtRuta.Text))
                         {
-                            using (StreamReader Leer = new StreamReader("C:\\prueba\\Libro1.csv"))
+                            using (StreamReader Leer = new StreamReader(txtRuta.Text))//"C:\\prueba\\Libro1.csv"))
                             {
                                 string Linea;
                                 while ((Linea = Leer.ReadLine()) != null)
