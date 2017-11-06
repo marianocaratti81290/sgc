@@ -2,6 +2,8 @@ C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLog
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\bin\Release\FrmLogin.exe
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\bin\Release\FrmLogin.pdb
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmAccesoSistema.resources
+C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmAgregarItemCampana.resources
+C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmCampana.resources
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmClientes.resources
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmConsultarCliente.resources
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmConsultaSucursales.resources
@@ -12,6 +14,10 @@ C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLog
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmEliminarUsuario.resources
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmEstadosSucursales.resources
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmGestionClientes.resources
+C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmInformeClientesNuevos.resources
+C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmInformeVeraz.resources
+C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmModificarCliente.resources
+C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmModificarGestionCliente.resources
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmModificarSucursal.resources
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmModificarUsuario.resources
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmMotivoEliminacionSucursal.resources
@@ -29,10 +35,3 @@ C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLog
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\RdlCompile.compiled
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.exe
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.pdb
-C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\GestionClientes.csprojResolveAssemblyReference.cache
-C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmModificarCliente.resources
-C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmAgregarItemCampana.resources
-C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmCampana.resources
-C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmInformeClientesNuevos.resources
-C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmInformeVeraz.resources
-C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Release\FrmLogin.FrmModificarGestionCliente.resources
