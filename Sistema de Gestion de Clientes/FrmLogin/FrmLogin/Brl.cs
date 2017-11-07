@@ -495,6 +495,40 @@ namespace FrmLogin
 
         }
 
+        public static DataTable obtenerCampanaXfiltro(DateTime FechaDesde, DateTime FechaHasta, string Usuario, string Sucursal)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("obtenerResultadoCampana_q_sp", Comun.establecerConexion);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@fechaDesde", FechaDesde);
+
+                cmd.Parameters.AddWithValue("@fechaHasta", FechaHasta);
+
+                cmd.Parameters.AddWithValue("@usuario", Usuario);
+
+                cmd.Parameters.AddWithValue("@sucursal", Sucursal);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+
         public static DataTable obtenercampanaXusuario(string usr)
         {
             try

@@ -475,6 +475,11 @@ namespace FrmLogin
 
         }
 
+        private void listadoDeCampañasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmSupervisarCampana().ShowDialog();
+        }
+
         
     }
 }

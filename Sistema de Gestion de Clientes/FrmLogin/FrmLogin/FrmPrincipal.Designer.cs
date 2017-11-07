@@ -63,6 +63,8 @@
             this.gbCampana = new System.Windows.Forms.GroupBox();
             this.btnHabilitarCamp = new System.Windows.Forms.Button();
             this.btnDesHabilitarCamp = new System.Windows.Forms.Button();
+            this.listadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoDeCampañasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCampanaUsuario)).BeginInit();
             this.gbCampana.SuspendLayout();
@@ -76,6 +78,7 @@
             this.usuariosToolStripMenuItem,
             this.sucursalesToolStripMenuItem,
             this.campañasToolStripMenuItem,
+            this.listadoToolStripMenuItem,
             this.reportesToolStripMenuItem,
             this.objetivosToolStripMenuItem,
             this.permisoToolStripMenuItem,
@@ -318,7 +321,7 @@
             this.dgvCampanaUsuario.Location = new System.Drawing.Point(13, 16);
             this.dgvCampanaUsuario.Name = "dgvCampanaUsuario";
             this.dgvCampanaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCampanaUsuario.Size = new System.Drawing.Size(323, 628);
+            this.dgvCampanaUsuario.Size = new System.Drawing.Size(323, 596);
             this.dgvCampanaUsuario.TabIndex = 1;
             this.dgvCampanaUsuario.DoubleClick += new System.EventHandler(this.dgvCampanaUsuario_DoubleClick);
             // 
@@ -327,7 +330,7 @@
             this.gbCampana.Controls.Add(this.dgvCampanaUsuario);
             this.gbCampana.Location = new System.Drawing.Point(12, 67);
             this.gbCampana.Name = "gbCampana";
-            this.gbCampana.Size = new System.Drawing.Size(352, 650);
+            this.gbCampana.Size = new System.Drawing.Size(352, 626);
             this.gbCampana.TabIndex = 2;
             this.gbCampana.TabStop = false;
             this.gbCampana.Text = "Proceso de campañas ";
@@ -352,6 +355,21 @@
             this.btnDesHabilitarCamp.Text = "Ocultar Campañas";
             this.btnDesHabilitarCamp.UseVisualStyleBackColor = true;
             this.btnDesHabilitarCamp.Click += new System.EventHandler(this.btnDesHabilitarCamp_Click);
+            // 
+            // listadoToolStripMenuItem
+            // 
+            this.listadoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listadoDeCampañasToolStripMenuItem});
+            this.listadoToolStripMenuItem.Name = "listadoToolStripMenuItem";
+            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.listadoToolStripMenuItem.Text = "Listado";
+            // 
+            // listadoDeCampañasToolStripMenuItem
+            // 
+            this.listadoDeCampañasToolStripMenuItem.Name = "listadoDeCampañasToolStripMenuItem";
+            this.listadoDeCampañasToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.listadoDeCampañasToolStripMenuItem.Text = "Listado de campañas";
+            this.listadoDeCampañasToolStripMenuItem.Click += new System.EventHandler(this.listadoDeCampañasToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -416,5 +434,7 @@
         private System.Windows.Forms.GroupBox gbCampana;
         private System.Windows.Forms.Button btnHabilitarCamp;
         private System.Windows.Forms.Button btnDesHabilitarCamp;
+        private System.Windows.Forms.ToolStripMenuItem listadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadoDeCampañasToolStripMenuItem;
     }
 }

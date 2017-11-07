@@ -220,6 +220,12 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSupervisarCampana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSupervisarCampana.Designer.cs">
+      <DependentUpon>FrmSupervisarCampana.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionClienteOperacionDetallada.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -313,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSupervisarCampana.resx">
+      <DependentUpon>FrmSupervisarCampana.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
