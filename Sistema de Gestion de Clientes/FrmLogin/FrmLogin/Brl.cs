@@ -36,6 +36,30 @@ namespace FrmLogin
 
         }
 
+        public static int existeClienteEnCampana(string dni)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("obtenerClienteEnCampana_q_sp", Comun.establecerConexion);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@dni", dni);
+               
+                SqlParameter existe = new SqlParameter("@existe", SqlDbType.Int);
+                existe.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(existe);
+                Comun.establecerConexion.Open();
+                cmd.ExecuteReader().Close();
+                Comun.establecerConexion.Close();
+                return (int)existe.Value;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
         public static int estadoGestionCamp(string dni)
         {
             try
@@ -312,6 +336,9 @@ namespace FrmLogin
 
         }
 
+
+        
+
         public static DataTable obtenerUsuarioSistema()
         {
             try
@@ -494,6 +521,36 @@ namespace FrmLogin
             }
 
         }
+
+
+        public static DataTable obtenerGestionCampanaXdni(string dni)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("obtenerClienteXdni_q_sp", Comun.establecerConexion);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@dni", dni);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+
 
         public static DataTable obtenerCampanaXfiltro(DateTime FechaDesde, DateTime FechaHasta, string Usuario, string Sucursal)
         {

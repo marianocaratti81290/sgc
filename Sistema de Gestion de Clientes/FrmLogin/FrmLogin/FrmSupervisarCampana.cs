@@ -50,9 +50,10 @@ namespace FrmLogin
 
         }
 
+        int existe;
         private void btnBuscarDni_Click(object sender, EventArgs e)
         {
-            int existe;
+           
 
             if (txtDni.Text == "")
             {
@@ -62,7 +63,7 @@ namespace FrmLogin
         
                 existe= Brl.existeClienteEnCampana(txtDni.Text);
 
-            if (existe = 0)
+            if (existe == 0)
             {
                 MessageBox.Show("El cliente no tiene una campaña asignada");
             }
@@ -70,6 +71,29 @@ namespace FrmLogin
             {
                 dgvGrillaFiltro.DataSource = Brl.obtenerGestionCampanaXdni(txtDni.Text);
             }
+        }
+
+        private void FrmSupervisarCampana_Load(object sender, EventArgs e)
+        {
+            dgvGrillaFiltro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void cbUsuarios_MouseDown(object sender, MouseEventArgs e)
+        {
+            cbUsuarios.DataSource = Brl.obtenerUsuarioSistema();
+            //indicamos el valor de los miembros
+            cbUsuarios.ValueMember = "usrSinEncript";
+            //se indica el valor a desplegar en el combobox
+            cbUsuarios.DisplayMember = "usrSinEncript";
+        }
+
+        private void cbSucursales_MouseDown(object sender, MouseEventArgs e)
+        {
+            cbSucursales.DataSource = Brl.obtenerSucursalesCb();
+            //indicamos el valor de los miembros
+            cbSucursales.ValueMember = "nombre";
+            //se indica el valor a desplegar en el combobox
+            cbSucursales.DisplayMember = "nombre";
         }
     }
 }
