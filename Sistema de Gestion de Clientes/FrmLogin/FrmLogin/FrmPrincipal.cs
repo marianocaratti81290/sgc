@@ -363,7 +363,14 @@ namespace FrmLogin
             dgvCampanaUsuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             
       
-
+            //--------------------------------------------------------------------------------------------------------------------
+           // Doy la bienvenida al usuario; muestro el usuario; muestro la hora; muestro la sucursal; muestro la conexion con la base de datos
+            
+            
+            
+            ssInfoUsuario.Text = "Usuario: " + FrmAccesoSistema.UsuarioPermiso + " |  ";
+            ssInfoSucursal.Text = "";
+            ssInfoFechaHora.Text = "Fecha de Ingreso: " + DateTime.Now.ToString("dd/MM/yyyy") + " " + DateTime.Now.ToString("hh:mm:ss");
 
 
        

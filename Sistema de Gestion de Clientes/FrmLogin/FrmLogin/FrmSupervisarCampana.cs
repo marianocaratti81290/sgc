@@ -19,21 +19,21 @@ namespace FrmLogin
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //if (cbUsuarios = -1)
-            //{
-            //    MessageBox.Show("Debe seleccionar un usuario");
-            //}
-            //else
-            //    if (cbSucursales.ValueMember == "")
-            //    {
-            //        MessageBox.Show("Debe selecionar una sucursal");
-            //    }
-            //    else
+            if (cbUsuarios.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar un usuario");
+            }
+            else
+                if (cbSucursales.Text == "")
+                {
+                    MessageBox.Show("Debe selecionar una sucursal");
+                }
+                else
 
                   dgvGrillaFiltro.DataSource=  Brl.obtenerCampanaXfiltro(Convert.ToDateTime(dtpDesde.Text), Convert.ToDateTime(dtpHasta.Text), cbUsuarios.Text, cbSucursales.Text);
 
            
-
+            
 
 
 

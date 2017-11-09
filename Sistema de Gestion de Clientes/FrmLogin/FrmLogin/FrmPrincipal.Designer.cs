@@ -51,6 +51,8 @@
             this.cambiarEstadoDeSucursalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.campañasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importarCampañaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoDeCampañasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.objetivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.objetivosPorUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,11 +65,15 @@
             this.gbCampana = new System.Windows.Forms.GroupBox();
             this.btnHabilitarCamp = new System.Windows.Forms.Button();
             this.btnDesHabilitarCamp = new System.Windows.Forms.Button();
-            this.listadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listadoDeCampañasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ssInfo = new System.Windows.Forms.StatusStrip();
+            this.ssInfoUsuario = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ssInfoSucursal = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ssInfoFechaHora = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ssInfoBd = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCampanaUsuario)).BeginInit();
             this.gbCampana.SuspendLayout();
+            this.ssInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -254,6 +260,21 @@
             this.importarCampañaToolStripMenuItem.Text = "Importar campaña";
             this.importarCampañaToolStripMenuItem.Click += new System.EventHandler(this.importarCampañaToolStripMenuItem_Click);
             // 
+            // listadoToolStripMenuItem
+            // 
+            this.listadoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listadoDeCampañasToolStripMenuItem});
+            this.listadoToolStripMenuItem.Name = "listadoToolStripMenuItem";
+            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.listadoToolStripMenuItem.Text = "Listado";
+            // 
+            // listadoDeCampañasToolStripMenuItem
+            // 
+            this.listadoDeCampañasToolStripMenuItem.Name = "listadoDeCampañasToolStripMenuItem";
+            this.listadoDeCampañasToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.listadoDeCampañasToolStripMenuItem.Text = "Listado de campañas";
+            this.listadoDeCampañasToolStripMenuItem.Click += new System.EventHandler(this.listadoDeCampañasToolStripMenuItem_Click);
+            // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
@@ -356,20 +377,42 @@
             this.btnDesHabilitarCamp.UseVisualStyleBackColor = true;
             this.btnDesHabilitarCamp.Click += new System.EventHandler(this.btnDesHabilitarCamp_Click);
             // 
-            // listadoToolStripMenuItem
+            // ssInfo
             // 
-            this.listadoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listadoDeCampañasToolStripMenuItem});
-            this.listadoToolStripMenuItem.Name = "listadoToolStripMenuItem";
-            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.listadoToolStripMenuItem.Text = "Listado";
+            this.ssInfo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ssInfoUsuario,
+            this.ssInfoSucursal,
+            this.ssInfoFechaHora,
+            this.ssInfoBd});
+            this.ssInfo.Location = new System.Drawing.Point(0, 707);
+            this.ssInfo.Name = "ssInfo";
+            this.ssInfo.Size = new System.Drawing.Size(1008, 22);
+            this.ssInfo.TabIndex = 6;
+            this.ssInfo.Text = "statusStrip1";
             // 
-            // listadoDeCampañasToolStripMenuItem
+            // ssInfoUsuario
             // 
-            this.listadoDeCampañasToolStripMenuItem.Name = "listadoDeCampañasToolStripMenuItem";
-            this.listadoDeCampañasToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.listadoDeCampañasToolStripMenuItem.Text = "Listado de campañas";
-            this.listadoDeCampañasToolStripMenuItem.Click += new System.EventHandler(this.listadoDeCampañasToolStripMenuItem_Click);
+            this.ssInfoUsuario.Name = "ssInfoUsuario";
+            this.ssInfoUsuario.Size = new System.Drawing.Size(38, 17);
+            this.ssInfoUsuario.Text = "..usr...";
+            // 
+            // ssInfoSucursal
+            // 
+            this.ssInfoSucursal.Name = "ssInfoSucursal";
+            this.ssInfoSucursal.Size = new System.Drawing.Size(40, 17);
+            this.ssInfoSucursal.Text = "..suc...";
+            // 
+            // ssInfoFechaHora
+            // 
+            this.ssInfoFechaHora.Name = "ssInfoFechaHora";
+            this.ssInfoFechaHora.Size = new System.Drawing.Size(37, 17);
+            this.ssInfoFechaHora.Text = "...hs...";
+            // 
+            // ssInfoBd
+            // 
+            this.ssInfoBd.Name = "ssInfoBd";
+            this.ssInfoBd.Size = new System.Drawing.Size(42, 17);
+            this.ssInfoBd.Text = "....bd...";
             // 
             // FrmPrincipal
             // 
@@ -378,6 +421,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.ssInfo);
             this.Controls.Add(this.btnDesHabilitarCamp);
             this.Controls.Add(this.btnHabilitarCamp);
             this.Controls.Add(this.gbCampana);
@@ -393,6 +437,8 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCampanaUsuario)).EndInit();
             this.gbCampana.ResumeLayout(false);
+            this.ssInfo.ResumeLayout(false);
+            this.ssInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,5 +482,10 @@
         private System.Windows.Forms.Button btnDesHabilitarCamp;
         private System.Windows.Forms.ToolStripMenuItem listadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeCampañasToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip ssInfo;
+        private System.Windows.Forms.ToolStripStatusLabel ssInfoUsuario;
+        private System.Windows.Forms.ToolStripStatusLabel ssInfoSucursal;
+        private System.Windows.Forms.ToolStripStatusLabel ssInfoFechaHora;
+        private System.Windows.Forms.ToolStripStatusLabel ssInfoBd;
     }
 }
