@@ -369,9 +369,9 @@ namespace FrmLogin
             
             
             ssInfoUsuario.Text = "Usuario: " + FrmAccesoSistema.UsuarioPermiso + " |  ";
-            ssInfoSucursal.Text = "";
-            ssInfoFechaHora.Text = "Fecha de Ingreso: " + DateTime.Now.ToString("dd/MM/yyyy") + " " + DateTime.Now.ToString("hh:mm:ss");
-
+            ssInfoSucursal.Text = "Sucursal " +" |  ";
+            ssInfoFechaHora.Text = "Fecha de Ingreso: " + DateTime.Now.ToString("dd/MM/yyyy") + " " + DateTime.Now.ToString("hh:mm:ss") + " |  ";
+            ssInfoBd.Text = "Conexion con base de datos existosa" + " |  ";
 
        
 
