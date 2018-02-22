@@ -315,6 +315,8 @@ namespace FrmLogin
             cbPlazo.Visible = false;
             cbComercioAdheridos.Visible = true;
             cbProductos.Visible = true;
+            lblComercio.Visible = true;
+            lblProducto.Visible = true;
         }
 
         private void rbPrestamo_Click(object sender, EventArgs e)
@@ -322,6 +324,8 @@ namespace FrmLogin
             cbPlazo.Visible = true;
             cbComercioAdheridos.Visible = false;
             cbProductos.Visible = false;
+            lblComercio.Visible = false;
+            lblProducto.Visible = false;
         }
 
 

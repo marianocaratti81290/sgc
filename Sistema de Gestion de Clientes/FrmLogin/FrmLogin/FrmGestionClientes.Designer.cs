@@ -72,6 +72,8 @@
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.cbComercioAdheridos = new System.Windows.Forms.ComboBox();
             this.cbProductos = new System.Windows.Forms.ComboBox();
+            this.lblComercio = new System.Windows.Forms.Label();
+            this.lblProducto = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrillaHistorialCliente)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -253,7 +255,7 @@
             // 
             this.cbRelacOrigen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRelacOrigen.FormattingEnabled = true;
-            this.cbRelacOrigen.Location = new System.Drawing.Point(223, 26);
+            this.cbRelacOrigen.Location = new System.Drawing.Point(259, 27);
             this.cbRelacOrigen.Name = "cbRelacOrigen";
             this.cbRelacOrigen.Size = new System.Drawing.Size(121, 21);
             this.cbRelacOrigen.TabIndex = 149;
@@ -304,6 +306,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblProducto);
+            this.groupBox2.Controls.Add(this.lblComercio);
             this.groupBox2.Controls.Add(this.cbComercioAdheridos);
             this.groupBox2.Controls.Add(this.cbProductos);
             this.groupBox2.Controls.Add(this.label6);
@@ -314,7 +318,7 @@
             this.groupBox2.Controls.Add(this.cbRelacOrigen);
             this.groupBox2.Location = new System.Drawing.Point(12, 253);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(358, 121);
+            this.groupBox2.Size = new System.Drawing.Size(388, 121);
             this.groupBox2.TabIndex = 140;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Como se entero";
@@ -330,7 +334,7 @@
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Location = new System.Drawing.Point(406, 253);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(417, 111);
+            this.groupBox3.Size = new System.Drawing.Size(417, 121);
             this.groupBox3.TabIndex = 141;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detalles de Gestion";
@@ -396,7 +400,7 @@
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Location = new System.Drawing.Point(12, 380);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(358, 188);
+            this.groupBox4.Size = new System.Drawing.Size(388, 188);
             this.groupBox4.TabIndex = 144;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Informes";
@@ -567,15 +571,37 @@
             this.cbComercioAdheridos.Name = "cbComercioAdheridos";
             this.cbComercioAdheridos.Size = new System.Drawing.Size(121, 21);
             this.cbComercioAdheridos.TabIndex = 151;
+            this.cbComercioAdheridos.Visible = false;
             // 
             // cbProductos
             // 
             this.cbProductos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProductos.FormattingEnabled = true;
-            this.cbProductos.Location = new System.Drawing.Point(223, 89);
+            this.cbProductos.Location = new System.Drawing.Point(259, 89);
             this.cbProductos.Name = "cbProductos";
             this.cbProductos.Size = new System.Drawing.Size(121, 21);
             this.cbProductos.TabIndex = 152;
+            this.cbProductos.Visible = false;
+            // 
+            // lblComercio
+            // 
+            this.lblComercio.AutoSize = true;
+            this.lblComercio.Location = new System.Drawing.Point(6, 92);
+            this.lblComercio.Name = "lblComercio";
+            this.lblComercio.Size = new System.Drawing.Size(54, 13);
+            this.lblComercio.TabIndex = 153;
+            this.lblComercio.Text = "Comercio:";
+            this.lblComercio.Visible = false;
+            // 
+            // lblProducto
+            // 
+            this.lblProducto.AutoSize = true;
+            this.lblProducto.Location = new System.Drawing.Point(200, 93);
+            this.lblProducto.Name = "lblProducto";
+            this.lblProducto.Size = new System.Drawing.Size(53, 13);
+            this.lblProducto.TabIndex = 154;
+            this.lblProducto.Text = "Producto:";
+            this.lblProducto.Visible = false;
             // 
             // FrmGestionClientes
             // 
@@ -654,5 +680,7 @@
         private System.Windows.Forms.TextBox txtObservaciones;
         private System.Windows.Forms.ComboBox cbComercioAdheridos;
         private System.Windows.Forms.ComboBox cbProductos;
+        private System.Windows.Forms.Label lblProducto;
+        private System.Windows.Forms.Label lblComercio;
     }
 }
