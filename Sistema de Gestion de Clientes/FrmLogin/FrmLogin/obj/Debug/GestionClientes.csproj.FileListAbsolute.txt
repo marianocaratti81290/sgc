@@ -60,4 +60,5 @@ C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLog
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Debug\RdlCompile.compiled
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Debug\FrmLogin.exe
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Debug\FrmLogin.pdb
+C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Debug\FrmLogin.FrmSupervisarCampana.resources
 C:\Users\Mariano\Desktop\Sistemas\Sistema de Gestion de Clientes\FrmLogin\FrmLogin\obj\Debug\GestionClientes.csprojResolveAssemblyReference.cache

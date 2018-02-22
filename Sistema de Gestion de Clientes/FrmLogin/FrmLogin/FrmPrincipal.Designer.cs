@@ -342,8 +342,9 @@
             this.dgvCampanaUsuario.Location = new System.Drawing.Point(13, 16);
             this.dgvCampanaUsuario.Name = "dgvCampanaUsuario";
             this.dgvCampanaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCampanaUsuario.Size = new System.Drawing.Size(323, 596);
+            this.dgvCampanaUsuario.Size = new System.Drawing.Size(519, 596);
             this.dgvCampanaUsuario.TabIndex = 1;
+            this.dgvCampanaUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCampanaUsuario_CellContentClick);
             this.dgvCampanaUsuario.DoubleClick += new System.EventHandler(this.dgvCampanaUsuario_DoubleClick);
             // 
             // gbCampana
@@ -351,7 +352,7 @@
             this.gbCampana.Controls.Add(this.dgvCampanaUsuario);
             this.gbCampana.Location = new System.Drawing.Point(12, 67);
             this.gbCampana.Name = "gbCampana";
-            this.gbCampana.Size = new System.Drawing.Size(352, 626);
+            this.gbCampana.Size = new System.Drawing.Size(548, 626);
             this.gbCampana.TabIndex = 2;
             this.gbCampana.TabStop = false;
             this.gbCampana.Text = "Proceso de campañas ";
@@ -419,7 +420,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.ssInfo);
             this.Controls.Add(this.btnDesHabilitarCamp);

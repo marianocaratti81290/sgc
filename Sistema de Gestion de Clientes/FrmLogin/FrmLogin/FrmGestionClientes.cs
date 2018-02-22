@@ -310,6 +310,20 @@ namespace FrmLogin
             }
         }
 
+        private void rbComercio_Click(object sender, EventArgs e)
+        {
+            cbPlazo.Visible = false;
+            cbComercioAdheridos.Visible = true;
+            cbProductos.Visible = true;
+        }
+
+        private void rbPrestamo_Click(object sender, EventArgs e)
+        {
+            cbPlazo.Visible = true;
+            cbComercioAdheridos.Visible = false;
+            cbProductos.Visible = false;
+        }
+
 
         
     }

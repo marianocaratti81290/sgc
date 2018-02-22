@@ -70,6 +70,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
+            this.cbComercioAdheridos = new System.Windows.Forms.ComboBox();
+            this.cbProductos = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrillaHistorialCliente)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -211,13 +213,14 @@
             this.rbComercio.Name = "rbComercio";
             this.rbComercio.Size = new System.Drawing.Size(69, 17);
             this.rbComercio.TabIndex = 149;
-            this.rbComercio.TabStop = true;
             this.rbComercio.Text = "Comercio";
             this.rbComercio.UseVisualStyleBackColor = true;
+            this.rbComercio.Click += new System.EventHandler(this.rbComercio_Click);
             // 
             // rbPrestamo
             // 
             this.rbPrestamo.AutoSize = true;
+            this.rbPrestamo.Checked = true;
             this.rbPrestamo.Location = new System.Drawing.Point(96, 62);
             this.rbPrestamo.Name = "rbPrestamo";
             this.rbPrestamo.Size = new System.Drawing.Size(69, 17);
@@ -225,6 +228,7 @@
             this.rbPrestamo.TabStop = true;
             this.rbPrestamo.Text = "Prestamo";
             this.rbPrestamo.UseVisualStyleBackColor = true;
+            this.rbPrestamo.Click += new System.EventHandler(this.rbPrestamo_Click);
             // 
             // label6
             // 
@@ -300,6 +304,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbComercioAdheridos);
+            this.groupBox2.Controls.Add(this.cbProductos);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.rbComercio);
@@ -308,7 +314,7 @@
             this.groupBox2.Controls.Add(this.cbRelacOrigen);
             this.groupBox2.Location = new System.Drawing.Point(12, 253);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(358, 111);
+            this.groupBox2.Size = new System.Drawing.Size(358, 121);
             this.groupBox2.TabIndex = 140;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Como se entero";
@@ -553,6 +559,24 @@
             this.txtObservaciones.Size = new System.Drawing.Size(402, 123);
             this.txtObservaciones.TabIndex = 145;
             // 
+            // cbComercioAdheridos
+            // 
+            this.cbComercioAdheridos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbComercioAdheridos.FormattingEnabled = true;
+            this.cbComercioAdheridos.Location = new System.Drawing.Point(73, 90);
+            this.cbComercioAdheridos.Name = "cbComercioAdheridos";
+            this.cbComercioAdheridos.Size = new System.Drawing.Size(121, 21);
+            this.cbComercioAdheridos.TabIndex = 151;
+            // 
+            // cbProductos
+            // 
+            this.cbProductos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbProductos.FormattingEnabled = true;
+            this.cbProductos.Location = new System.Drawing.Point(223, 89);
+            this.cbProductos.Name = "cbProductos";
+            this.cbProductos.Size = new System.Drawing.Size(121, 21);
+            this.cbProductos.TabIndex = 152;
+            // 
             // FrmGestionClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -628,5 +652,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox txtObservaciones;
+        private System.Windows.Forms.ComboBox cbComercioAdheridos;
+        private System.Windows.Forms.ComboBox cbProductos;
     }
 }

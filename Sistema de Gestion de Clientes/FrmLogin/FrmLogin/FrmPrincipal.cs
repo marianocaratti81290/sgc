@@ -88,6 +88,8 @@ namespace FrmLogin
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
+            dgvCampanaUsuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            
             // PERMISOS 
 
             //Permisos frmclientes
@@ -365,8 +367,8 @@ namespace FrmLogin
       
             //--------------------------------------------------------------------------------------------------------------------
            // Doy la bienvenida al usuario; muestro el usuario; muestro la hora; muestro la sucursal; muestro la conexion con la base de datos
-            
-            
+
+            leerArchivoDeTexto();
             
             ssInfoUsuario.Text = "Usuario: " + FrmAccesoSistema.UsuarioPermiso + " |  ";
             ssInfoSucursal.Text = "Sucursal " +" |  ";
@@ -375,6 +377,42 @@ namespace FrmLogin
 
        
 
+        }
+
+        private void leerArchivoDeTexto()
+        {
+            int counter = 0;
+            string line;
+            string entidadSucursal = "";
+            string nroentidad;
+
+
+            // Read the file and display it line by line.  
+            System.IO.StreamReader file =
+                new System.IO.StreamReader(@"c:\sistemas\ejecutables\config.txt");
+            while ((line = file.ReadLine()) != null)
+            {
+                System.Console.WriteLine(line);
+                entidadSucursal = line;
+                counter++;
+            }
+            
+
+            //string SoloNumero = "";
+            //int index = 0;
+            //for (index = 1; index <= Lenght(entidadSucursal); index++)
+            //{
+
+
+            //}
+
+
+
+
+            file.Close();
+            System.Console.WriteLine("There were {0} lines.", counter);
+            // Suspend the screen.  
+            System.Console.ReadLine();  
         }
 
         private void consultaDeUsuariosToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -485,6 +523,11 @@ namespace FrmLogin
         private void listadoDeCampañasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FrmSupervisarCampana().ShowDialog();
+        }
+
+        private void dgvCampanaUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         
